@@ -1,0 +1,243 @@
+header {
+  width: 100vw;
+  background-color: var(--color3);
+  height: 76.5px;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  top: 0;
+  position: fixed;
+  background-color: var(--color3);
+  z-index: 9999;
+}
+
+.wrapper-header  {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: auto;
+  top: 0;
+  background-color: var(--color3);
+  position: fixed;
+  z-index: 9999;
+ }
+
+ .wrapper-header h2{
+  color: var(--color2);
+ }
+
+
+.logo {
+  content: url("../img/ICO-YT.jpeg");
+  width: 80px;
+  z-index: 10000;
+  position: relative;
+}
+
+.icon-menu, .icon-cross {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--color3);
+}
+
+
+.menu {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: end;
+  gap: 2rem;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color3);
+  padding: 2rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.menu.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lista-menu {
+  align-items: end;
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem; /* Ajusta el espacio entre elementos */
+  font-weight: 600;
+}
+
+.lista-menu li {
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lista-menu li a {
+  display: block;
+  padding: 8px 12px; /* Espaciado interno */
+  color: var(--color2);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 10px;
+  background-color: var(--color1);
+  color: var(--color2);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn img {
+  width: 16px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  background-color: var(--color8);
+}
+
+@media screen and (min-width: 768px) {
+
+  header {
+    height: 100px;
+  }
+
+  .header {
+    padding: 1.5rem 2.8rem;
+  }
+
+  .wrapper-header  {
+    height: 100px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .icon-menu,
+  .icon-cross {
+    font-size: 1.8rem;
+  }
+
+  .menu {
+    width: 100%;
+    background-color: var(--color3);
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    
+  }
+
+  .lista-menu li a {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    /* height: 168px; */
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    max-width: 1200px;
+    gap: 20px;
+    margin: auto;
+  }
+
+  .wrapper-header  {
+    height: 100px;
+    box-shadow: none;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    content: url("../img/ICO-YT.jpeg");
+    width: 100px;
+  }
+
+  .menu {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 1;
+  }
+
+  .lista-menu {
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+    gap: 1rem;
+    white-space: nowrap;
+  }
+
+  .lista-menu li {
+    display: inline-block;
+  }
+
+  .lista-menu a {
+    display: block;
+    padding: 0px 8px;
+    color: var(--color2);
+    font-size: 1.2rem;
+  }
+
+  .lista-menu a:hover {
+    background-color: var(--color1);
+    color: var(--color2);
+  }
+
+  .icon-menu,
+  .icon-cross {
+    display: none;
+  }
+}
+
+

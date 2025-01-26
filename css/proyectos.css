@@ -1,0 +1,332 @@
+body, html {
+  overflow-x: hidden; /* Desactiva el desbordamiento horizontal */
+}
+.section-proyectos {
+  background-color: var(--color3);
+  padding: 4rem 1rem 4rem;
+  text-align: center;
+}
+
+.section-proyectos h1 {
+  color: var(--color2);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0 0 2rem;
+}
+
+.content-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 5rem;
+}
+
+.content-buttons a {
+  min-width: 230px;
+  background-color: var(--color6);
+  border: none;
+  border-radius: 8px;
+  color: var(--color2);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.content-buttons a:hover {
+  background-color: var(--color9);
+}
+
+.section-proyectos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-proyectos {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.video-proyectos video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.content-info {
+  margin: 30px 0px;
+}
+
+.content-info a {
+  font-size: 1.1rem;
+  margin: 20px 0px;
+  color: var(--color2);
+  font-weight: 600;
+}
+
+.content-info a:hover {
+  color: var(--color10);
+}
+
+.content-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 20px 0px;
+  color: var(--color2);
+}
+
+/* Botones de tecnologías */
+.content-info button {
+  background-color: var(--color7);
+  border: 1px solid var(--color7);
+  border-radius: 8px;
+  color: var(--color3);
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: default;
+}
+
+.content-info button:hover {
+  background-color: var(--color5);
+}
+
+@media (min-width: 768px) {
+  .section-proyectos h1 {
+    font-size: 1.8rem;
+  }
+
+  .content-buttons {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .content-buttons a {
+    font-size: 1.2rem;
+  }
+
+  .content-info a {
+    font-size: 1.3rem;
+  }
+
+  .content-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .content-info button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-proyectos h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .content-buttons a {
+    font-size: 1.2rem;
+  }
+
+  .content-buttons a:hover {
+    background-color: var(--color9);
+  }
+
+  .proyecto {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    max-width: 1220px;
+    height: 430px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .proyecto:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .img-proyectos {
+    width: 600px;
+    border-radius: 10px;
+    padding-left: 20px;
+  }
+
+  .content-info {
+    padding: 0 30px;
+  }
+
+  .content-info a {
+    font-size: 1.8rem;
+  }
+
+  .content-info p {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .sec__controls {
+    position:-ms-page;
+    top: 80px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    border-radius: 7px;
+    padding: 3px;
+    box-shadow: inset 8px 8px 40px 0 rgba(0, 100, 0, 0.4),
+      inset -4px -4px 8px 0 rgba(55, 255, 20, 0.72),
+      inset 0 1px 1px 0 rgba(0, 100, 0, 0.4);
+    background-image: linear-gradient(180deg, #006400, #37ff14b7 53%, #006400);
+    z-index: 99;
+  }
+
+  .sec__controls p {
+    cursor: pointer;
+    width: 50%;
+    margin-bottom: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s;
+    color: #37ff14b7;
+  background-color: transparent;
+  box-shadow: none;
+  }
+
+  .sec__controls p:hover {
+    opacity: 1;
+
+  }
+
+  .sec__controls p.controlActive {
+    color: #006400;
+    background-color: #37ff14b7;
+    box-shadow: 0 0 10px #37ff14b7;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Evita que haya scroll adicional */
+    display: flex;
+    /* Asegura que se ajusten correctamente */
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    /* Asegura que las tarjetas estén en fila */
+    flex-direction: row;
+    /* Se alinean horizontalmente */
+    padding-left: 0;
+    /* Elimina cualquier margen izquierdo que podría causar el desbordamiento */
+    margin-left: 0;
+    /* Asegura que no haya margen adicional */
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centrar el contenido dentro de la tarjeta */
+    justify-content: space-between;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 0;
+    /* Asegura que no haya espacio adicional al final de las tarjetas */
+    overflow: hidden;
+    /* Asegura que la imagen no sobresalga */
+  }
+
+  .tags-button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .tags-button:hover {
+    background-color: #0056b3;
+  }
+
+  .security-projects,
+  .software-projects {
+    max-height: 100vh; /* Limitar el alto de la sección */
+    overflow-y: auto; /* Agregar scroll interno si es necesario */
+    margin: 0 auto; /* Centrar el contenido */  }
+
+  .project-image {
+    width: 100%;
+    height: 200px;
+    /* Ajusta la altura de la imagen */
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* Espacio entre la imagen y el contenido */
+  }
+
+  .project-image:img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio sin deformarse */
+  }
+
+  .swiper-slide:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  /* Estilos para ocultar secciones */
+.section-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: none;
+
+}
+
+/* Estilos para mostrar secciones */
+.section-visible {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: block;
+  width: 100%; /* Asegúrate de que la sección ocupe el 100% del ancho */
+}
+
+}

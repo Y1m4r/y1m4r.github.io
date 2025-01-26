@@ -1,0 +1,212 @@
+.section-about-me {
+  background-color: black;
+  text-align: center;
+  padding: 4.5rem 1.5rem 4rem;
+  color: var(--color4);
+  gap: 48px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea todos los elementos en el centro */
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: row-reverse; /* Divide la sección en 2 columnas */
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho de la sección */
+  color: var(--color4);
+
+}
+
+.text-and-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.text-and-buttons h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  color: var(--color2);
+  font-weight: 700;
+}
+
+.text-and-buttons p {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.info {
+  display: flex;
+  flex-direction: row; /* Alinea la imagen y el texto en fila */
+  justify-content: space-between; /* Deja espacio entre los elementos */
+  gap: 30px;
+  align-items: center; /* Alineación centrada para los elementos */
+}
+
+
+.section-about-me h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;  /* Ajusta el margen para colocar el título encima */
+  color: var(--color2);
+  font-weight: 700;
+  text-align: center;  /* Asegúrate de que el texto esté centrado */
+
+}
+
+
+.section-about-me p {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 30px;  /* Espacio debajo del texto */
+}
+
+.container-formacion {
+  margin: 40px 0px;
+}
+
+.formacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.texto-formacion p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .section-about-me h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-about-me p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .texto-formacion p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .info {
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  .section-about-me h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-about-me p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    max-width: 600px;
+  }
+
+  .container-formacion {
+    height: 400px;
+  }
+
+  .container-formaciones {
+    max-width: 600px;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .texto-formacion p {
+    font-size: 1.1rem;
+  }
+
+  .menu-about-me {
+    display: flex;
+    flex-direction: row;  /* Los botones en fila */
+    gap: 15px;
+    margin-top: 30px;  /* Espacio encima de los botones */
+    justify-content: center;  /* Centrar los botones */
+  }
+
+  .menu-about-me button {
+    background-color: var(--color3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .menu-about-me button:hover {
+    background-color: var(--color3);
+  }
+
+  .tab-content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .imagen-section-inicio {
+    border-radius: 50%;  /* Hace que la imagen sea redonda */
+    object-fit: cover;  /* Asegura que la imagen se recorte de manera proporcional */
+  }
+  .imagen-section-aboutme {
+    width: 400px;  /* Ajusta el tamaño de la imagen a un tamaño más pequeño */
+    height: 400px;  /* Mantén la relación de aspecto cuadrada */
+    border-radius: 50%;  /* Hace que la imagen sea redonda */
+    object-fit: cover;  /* Asegura que la imagen se recorte de manera proporcional */
+  }
+}

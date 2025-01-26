@@ -1,0 +1,111 @@
+
+.contact-section {
+  display:flex ;
+  justify-content: space-between;
+  align-items: flex-start;  
+  gap: 20px; /* Reducir el espacio entre los dos contenedores */
+  padding: 10px;  
+  margin: 0;
+  background-color: black;
+  color:var(--color4);
+
+}
+
+
+.contact-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color:var(--color4);
+
+}
+
+.contact-content p {
+  font-size: 1rem;
+  color:var(--color4);
+}
+
+.contact-left {
+  flex: 1;
+  max-width: 48%;
+  padding: 0; /* Elimina el padding extra si lo hay */
+  flex-direction: column;  /* Para alinear los elementos dentro de cada columna */
+
+}
+
+.contact-right {
+  flex: 1;
+  max-width: 48%;
+  padding: 0; /* Elimina el padding extra si lo hay */
+  flex-direction: column;  /* Para alinear los elementos dentro de cada columna */
+
+}
+
+.contact-left h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.social-link {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  color: #6812EA;
+  text-decoration: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0; /* Asegura que no haya márgenes extra */
+
+}
+
+.contact-form label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+#submit-btn {
+  background-color: #6812EA;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #5b0ac1;
+}
+
+#g-recaptcha {
+  margin-bottom: 10px;
+}
+
+#status {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+}

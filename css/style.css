@@ -1,0 +1,70 @@
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url("https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css");
+
+/*Paleta de colores*/
+:root {
+  --color1: #006400;
+  --color2: #ffffff;
+  --color3: #000000;
+  --color4: #7A7A7D;
+  --color5: #E1E1E1;
+  --color6: #22ccb8;
+  --color7: #DAD8D8;
+  --color8: #693ad6;
+  --color9: #37ff14b7;
+  --color10: #daccf8;
+}
+
+/*Estilos Generales*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Sora", serif;
+  scroll-behavior: smooth;
+}
+
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* main {
+  margin-top: 76.5px;
+} */
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+  /* main {
+    margin-top: 100px;
+  } */
+}
+
+@media screen and (min-width: 1024px) {
+  /* main {
+    margin-top: 168px;
+  } */
+}
