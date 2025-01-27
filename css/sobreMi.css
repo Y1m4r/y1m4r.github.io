@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* Alinea todos los elementos en el centro */
+  
 }
 
 .about-me-content {
@@ -17,9 +18,9 @@
   gap: 30px;
   align-items: flex-start;
   width: 100%;
-  max-width: 1200px; /* Limita el ancho de la sección */
+  max-width: 100%; /* Limita el ancho de la sección */
   color: var(--color4);
-
+  margin-top: 60px;
 }
 
 .text-and-buttons {
@@ -101,6 +102,98 @@ h4 {
   font-weight: 400;
 }
 
+.menu-about-me {
+  display:flex;
+  flex-direction: row;  /* Los botones en fila */
+  gap: 15px;
+  margin-bottom: 20px; /* Espaciado entre botones y contenido de la pestaña */
+
+}
+
+.menu-about-me button {
+  background-color: var(--color3);
+  color: white;
+  border: none;
+  padding: 9px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+}
+
+.menu-about-me button:hover {
+  background-color: var(--color3);
+}
+
+.tab-content {
+  width: 100%; /* Ajusta al ancho completo del contenedor */
+  height: 60%;
+  display: none;
+  text-align:justify;
+  padding: 0px;
+  margin-top: 0; /* Asegúrate de que no haya margen adicional */
+
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 40px 40px 35px 40px 40px 40px 40px 40px; /* Define un tamaño fijo para cada columna */
+
+  gap: 25px;
+  align-items: center;
+}
+
+.grid img {
+  width: 119%; /* Tamaño ajustado para que sean más pequeñas */
+  max-width: 100px; /* Asegura que las imágenes no se expandan demasiado, manteniendo un tamaño adecuado y consistente.
+  height: auto; /* Asegura que la imagen sea cuadrada */
+  object-fit: cover; /* Recorta proporcionalmente el contenido */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 35px 35px; /* Define un tamaño fijo para cada columna */
+
+  gap: 80px;
+  align-items: center;
+}
+
+.grid2 img {
+  width: 333%; /* Tamaño ajustado para que sean más pequeñas */
+  max-width: 350px; /* Asegura que las imágenes no se expandan demasiado, manteniendo un tamaño adecuado y consistente.
+  height: auto; /* Asegura que la imagen sea cuadrada */
+  object-fit: cover; /* Recorta proporcionalmente el contenido */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+
+.imagen-section-aboutme {
+  width: 400px;  /* Ajusta el tamaño de la imagen a un tamaño más pequeño */
+  height: 400px;  /* Mantén la relación de aspecto cuadrada */
+  border-radius: 50%;  /* Hace que la imagen sea redonda */
+  object-fit: cover;  /* Asegura que la imagen se recorte de manera proporcional */
+}
+
+.skill {
+  display:contents;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.skill span {
+
+  text-align: center;
+  color: var(--color2);
+  display:none;
+
+}
+
 @media screen and (min-width: 768px) {
   .section-about-me h1 {
     font-size: 1.8rem;
@@ -152,61 +245,5 @@ h4 {
 
   .texto-formacion p {
     font-size: 1.1rem;
-  }
-
-  .menu-about-me {
-    display: flex;
-    flex-direction: row;  /* Los botones en fila */
-    gap: 15px;
-    margin-top: 30px;  /* Espacio encima de los botones */
-    justify-content: center;  /* Centrar los botones */
-  }
-
-  .menu-about-me button {
-    background-color: var(--color3);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-
-  .menu-about-me button:hover {
-    background-color: var(--color3);
-  }
-
-  .tab-content {
-    display: none;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .tab-content.active {
-    display: block;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  .imagen-section-inicio {
-    border-radius: 50%;  /* Hace que la imagen sea redonda */
-    object-fit: cover;  /* Asegura que la imagen se recorte de manera proporcional */
-  }
-  .imagen-section-aboutme {
-    width: 400px;  /* Ajusta el tamaño de la imagen a un tamaño más pequeño */
-    height: 400px;  /* Mantén la relación de aspecto cuadrada */
-    border-radius: 50%;  /* Hace que la imagen sea redonda */
-    object-fit: cover;  /* Asegura que la imagen se recorte de manera proporcional */
   }
 }

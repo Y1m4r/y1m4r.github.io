@@ -51,6 +51,13 @@ header {
   position: relative;
 }
 
+h2 {
+  width: auto; /* O eliminar width si está restringido */
+  white-space: nowrap; /* Asegura que no se divida en dos líneas */
+  margin: 0;
+  line-height: 1.2; /* Ajustar según la apariencia deseada */
+}
+
 .icon-menu, .icon-cross {
   display: block;
   font-size: 1.5rem;
@@ -100,33 +107,11 @@ header {
 
 .lista-menu li a {
   display: block;
-  padding: 8px 12px; /* Espaciado interno */
+  padding: 4px 12px; /* Espaciado interno */
   color: var(--color2);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-decoration: none;
   border-radius: 5px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 10px;
-  background-color: var(--color1);
-  color: var(--color2);
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.btn img {
-  width: 16px;
-  margin-left: 5px;
-  vertical-align: middle;
-}
-
-.btn:hover {
-  background-color: var(--color8);
 }
 
 @media screen and (min-width: 768px) {
@@ -166,9 +151,6 @@ header {
     font-size: 1.2rem;
   }
 
-  .btn {
-    font-size: 1.1rem;
-  }
 
 }
 

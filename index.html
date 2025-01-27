@@ -14,24 +14,24 @@
   <link rel="stylesheet" href="./css/proyectos.css" />
   <link rel="stylesheet" href="./css/sobreMi.css" />
   <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/contact.css"/>
+  <link rel="stylesheet" href="./css/contact.css" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
   <header>
     <div class="wrapper-header">
-      <img class="logo" src="./img/ICO MP.jpeg" alt="logo MP DISEÑO" />
+      <img class="logo" src="./img/ICO MP.jpeg" alt="logo YT DISEÑO" />
       <h2>Yimar Tamayo</h2>
       <span id="abrir" class="icon-menu"></span>
       <nav id="menu" class="menu">
         <span id="cerrar" class="icon-cross"></span>
         <ul class="lista-menu">
           <li><a href="#inicio">Home</a></li>
-          <li><a href="#About me">About Me</a></li>
+          <li><a href="#AboutMe">About Me</a></li>
           <li><a href="#proyectos">Projects</a></li>
           <li><a href="#contacto">Contact me</a></li>
-          <li><a href="./blog/blog.html" class="btn">Blog</a></li>
+          <li><a href="./blog">Blog</a></li>
         </ul>
 
       </nav>
@@ -55,15 +55,10 @@
               make cybersecurity extraordinary!</p>
             <div class="buttons">
               <a href="https://www.linkedin.com/in/yimart/" target="_blank" rel="noopener noreferrer">
-                <img src="./img/icon-Linkedin.svg" alt="Linkedin">
+                <img src="./img/logolinkedin.png" alt="Linkedin">
               </a>
               <a href="https://github.com/Yimar22?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img src="./img/logoGithub.svg" alt="GitHub">
-              </a>
-              <a href="https://drive.google.com/file/d/19VjxWi8Yuv3TeG2GGQTrg-DwYQOzpZbg/view?usp=sharing"
-                target="_blank" class="btn">
-                Download CV <img src="./img/icon-download.svg" alt="Descargar CV">
-              </a>
+                <img src="./img/logogithub.png" alt="GitHub">
               </a>
             </div>
           </div>
@@ -73,7 +68,7 @@
 
     </section>
 
-    <section id="About me" class="section-about-me">
+    <section id="AboutMe" class="section-about-me">
       <div class="about-me-content">
         <div class="text-and-buttons">
           <h1>About Me</h1>
@@ -90,9 +85,81 @@
 
           <!-- Navigation Menu -->
           <div class="menu-about-me">
-            <button onclick="showTab('skills')">Skills</button>
+            <button onclick="toggleTab('skills')">Skills</button>
             <button onclick="showTab('education')">Education</button>
             <button onclick="showTab('certifications')">Certifications</button>
+          </div>
+
+          <!-- Tab Content -->
+          <div id="skills" class="tab-content">
+            <div class="grid">
+              <div class="skill">
+                <img src="./img/logo-java.png" alt="Java logo">
+                <span>Java</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-python.png" alt="Python logo">
+                <span>Python</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-sql.png" alt="SQL logo">
+              </div>
+              <div class="skill">
+                <img src="./img/logo-postman.png" alt="Postman logo">
+                <span>Postman</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-burpsuite.png" alt="BurpSuite logo">
+                <span>BurpSuite</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-nmap.png" alt="Nmap logo">
+                <span>Nmap</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-nessus.webp" alt="Nessus logo">
+              </div>
+              <div class="skill">
+                <img src="./img/logo-splunk.png" alt="Splunk logo">
+              </div>
+              <div class="skill">
+                <img src="./img/logo-wazuh.png" alt="Wazuh logo">
+              </div>
+              <div class="skill">
+                <img src="./img/logo-sailpoint.webp" alt="SailPoint logo">
+              </div>
+              <div class="skill">
+                <img src="./img/logo-bash.png" alt="Bash logo">
+                <span>Bash</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-powershell.png" alt="PowerShell logo">
+                <span>PowerShell</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-metasploit.jpg" alt="Metasploit logo">
+                <span>Metasploit</span>
+              </div>
+              <div class="skill">
+                <img src="./img/logo-htb.png" alt="HackTheBox logo">
+                <span>HackTheBox</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="education" class="tab-content">
+            <ul>
+              <li>• Software Engineering - Icesi University</li>
+              <li>• Diploma in Ethical Hacking (Red, Blue & Purple Team Training) - UdeCataluña</li>
+              <li>• Hackers Academy - Hackmetrix</li>
+            </ul>
+          </div>
+
+          <div id="certifications" class="tab-content">
+            <div class="grid2">
+              <img src="./img/badge-ejpt.png" alt="Certificado INE">
+              <img src="./img/badge-ehca.png" alt="Certificado CertJoin">
+            </div>
           </div>
         </div>
 
@@ -101,52 +168,7 @@
         </div>
       </div>
 
-      <!-- Tab Content -->
-      <div id="skills" class="tab-content">
-        <h2>Skills</h2>
-        <div class="grid">
-          <div class="skill">
-            <img src="./img/logo-html5-negro.svg" alt="HTML logo">
-            <span>HTML</span>
-          </div>
-          <div class="skill">
-            <img src="./img/logo-css3-negro.svg" alt="CSS logo">
-            <span>CSS</span>
-          </div>
 
-          <div class="skill">
-            <img src="./img/logo-javascript-negro.svg" alt="JavaScript logo">
-            <span>JavaScript</span>
-          </div>
-
-          <div class="skill">
-            <img src="./img/logo-figma.negro.svg" alt="Figma logo">
-            <span>Figma</span>
-          </div>
-
-          <div class="skill">
-            <img src="./img/logo-git-negro.svg" alt="Git logo">
-            <span>Git</span>
-          </div>
-        </div>
-      </div>
-
-      <div id="education" class="tab-content">
-        <h2>Education</h2>
-        <ul>
-          <li>Systems Engineering - Icesi University</li>
-          <li>Web Design - FreeCodeCamp</li>
-          <li>JavaScript Fundamentals - Udemy</li>
-        </ul>
-      </div>
-
-      <div id="certifications" class="tab-content">
-        <h2>Certifications</h2>
-        <div class="grid">
-          <img src="./imagenes/certificado-freecodecamp.png" alt="Certificado FreeCodeCamp">
-          <img src="./imagenes/certificado-udemy.jpg" alt="Certificado Udemy">
-        </div>
-      </div>
     </section>
 
     <section id="proyectos" class="section-proyectos">
@@ -165,7 +187,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="project-image">
-                <img src="C:\Users\yimar\OneDrive\Imágenes/test.jpg" alt="Descripción del proyecto">
+                <img src="" alt="Descripción del proyecto">
               </div>
               <a href="#">Pentest Web App</a>
               <p>Identificación y mitigación de vulnerabilidades críticas en una aplicación web.</p>
@@ -237,17 +259,18 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <div class="contact-left">
-          <h2>¡Conectemos!</h2>
-          <p>¡Todo gran proyecto comienza con una conversación! Si eres reclutador, amante de la tecnología o un colaborador creativo, 
-            estaré encantado de saber de ti. Juntos podemos transformar ideas innovadoras en realidades.</p>
+      <div class="contact-left">
+        <h2>¡Conectemos!</h2>
+        <p>¡Todo gran proyecto comienza con una conversación! Si eres reclutador, amante de la tecnología o un
+          colaborador creativo,
+          estaré encantado de saber de ti. Juntos podemos transformar ideas innovadoras en realidades.</p>
 
-          <div class="socials">
-            <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
-            <a href="https://www.linkedin.com" target="_blank" class="social-link">LinkedIn</a>
-            <a href="https://discord.com" target="_blank" class="social-link">Discord</a>
-          </div>
+        <div class="socials">
+          <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+          <a href="https://discord.com" target="_blank" class="social-link">Discord</a>
         </div>
+      </div>
 
       <div class="contact-right">
         <form id="contact-form" class="contact-form">
@@ -260,7 +283,7 @@
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" placeholder="Escribe tu mensaje..." required></textarea>
 
-          <div class="g-recaptcha" data-sitekey="tu-clave-de-recaptcha"></div>
+          <div class="g-recaptcha" data-sitekey="6LcxJcUqAAAAAL5t3IMVZLKmo-h30_GJxpYUC_HJ"></div>
 
           <button type="submit" id="submit-btn">Enviar</button>
 
@@ -274,9 +297,9 @@
   </main>
   <footer>
     <div class="derechos">
-      <p>© 2024 Yimar Tamayo. Todos los derechos reservados.  
-        Este sitio web y su contenido están protegidos por la legislación de derechos de autor.  
-        Se prohíbe estrictamente su uso, reproducción o distribución no autorizada.  
+      <p>© 2024 Yimar Tamayo. Todos los derechos reservados.
+        Este sitio web y su contenido están protegidos por la legislación de derechos de autor.
+        Se prohíbe estrictamente su uso, reproducción o distribución no autorizada.
         Para permisos o consultas, por favor contáctanos directamente.</p>
       <a href="https://google.com" target="_blank">Creado por Yimar Tamayo</a>
     </div>
@@ -287,7 +310,7 @@
 
   <!-- Animación de texto -->
   <script>
-    const texts = ['Yimar', 'Ethical Hacker', 'Pentester', 'SOC Analyst'];
+    const texts = ['Y1m4r', 'Ethical Hacker', 'Pentester', 'SOC Analyst'];
     let currentTextIndex = 0;
     let currentCharIndex = 0;
     const typewriterElement = document.getElementById('typewriter');
@@ -322,12 +345,44 @@
 
   <!-- Control de pestañas -->
   <script>
+    function toggleTab(tabId) {
+      const tabContent = document.getElementById(tabId);
+
+      // Verifica si la pestaña ya está activa. Si lo está, la oculta; si no, la muestra.
+      if (tabContent.classList.contains('active')) {
+        tabContent.classList.remove('active');
+      } else {
+        // Oculta todas las demás pestañas
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Muestra la pestaña seleccionada
+        tabContent.classList.add('active');
+      }
+    }
+
+    // Para que 'skills' se muestre por defecto
+    document.addEventListener('DOMContentLoaded', () => {
+      toggleTab('skills');
+    });
+  </script>
+
+  <!-- Control de pestañas -->
+  <script>
     function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.getElementById(tabId).classList.add('active');
+      const tabContent = document.getElementById(tabId);
+
+      // Verifica si la pestaña ya está activa. Si lo está, la oculta; si no, la muestra.
+      if (tabContent.classList.contains('active')) {
+        tabContent.classList.remove('active');
+      } else {
+        // Oculta todas las demás pestañas
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Muestra la pestaña seleccionada
+        tabContent.classList.add('active');
+      }
     }
   </script>
 
@@ -414,7 +469,7 @@
       };
 
       grecaptcha.ready(function () {
-        grecaptcha.execute('tu-clave-de-recaptcha', { action: 'submit' }).then(function (token) {
+        grecaptcha.execute('6LcxJcUqAAAAAL5t3IMVZLKmo-h30_GJxpYUC_HJ', { action: 'submit' }).then(function (token) {
           formData.token = token;
 
           fetch('/api/send', {
@@ -441,4 +496,9 @@
 
 </body>
 
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+</style>  
 </html>
