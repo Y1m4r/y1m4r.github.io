@@ -47,22 +47,6 @@ body, html {
   gap: 20px;
 }
 
-.video-proyectos {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-}
-
-.video-proyectos video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  overflow: hidden;
-  display: block;
-}
-
 .hidden {
   display: none;
 }
@@ -191,8 +175,10 @@ body, html {
     margin-bottom: 10px;
   }
 
-  .sec__controls {
-    position:-ms-page;
+}
+
+.sec__controls {
+    position: -ms-page;
     top: 80px;
     max-width: 400px;
     margin: 0 auto;
@@ -202,13 +188,13 @@ body, html {
     align-items: center;
     border-radius: 7px;
     padding: 3px;
-    box-shadow: inset 8px 8px 40px 0 rgba(0, 100, 0, 0.4),
-      inset -4px -4px 8px 0 rgba(55, 255, 20, 0.72),
-      inset 0 1px 1px 0 rgba(0, 100, 0, 0.4);
-    background-image: linear-gradient(180deg, #006400, #37ff14b7 53%, #006400);
+    box-shadow: inset 8px 8px 40px 0 rgba(0, 0, 0, 0.4),
+                inset -4px -4px 8px 0 rgba(50, 50, 50, 0.72),
+                inset 0 1px 1px 0 rgba(0, 0, 0, 0.4);
+    background-color: #2e2e2e; /* Gris oscuro */
     z-index: 99;
   }
-
+  
   .sec__controls p {
     cursor: pointer;
     width: 50%;
@@ -217,20 +203,19 @@ body, html {
     border-radius: 5px;
     text-align: center;
     transition: all 0.3s;
-    color: #37ff14b7;
-  background-color: transparent;
-  box-shadow: none;
+    color: #ffffff; /* Color blanco para texto */
+    background-color: #3c3c3c; /* Gris oscuro para botones inactivos */
+    box-shadow: none;
   }
-
+  
   .sec__controls p:hover {
-    opacity: 1;
-
+    opacity: 0.8;
   }
-
+  
   .sec__controls p.controlActive {
-    color: #006400;
-    background-color: #37ff14b7;
-    box-shadow: 0 0 10px #37ff14b7;
+    color: #ffffff; /* Color blanco para texto */
+    background-color: #4a4a4a; /* Gris claro para botón activo */
+    box-shadow: 0 0 10px rgba(200, 200, 200, 0.5); /* Suavidad para el botón activo */
   }
 
   .swiper-container {
@@ -260,8 +245,8 @@ body, html {
     /* Centrar el contenido dentro de la tarjeta */
     justify-content: space-between;
     padding: 15px;
-    background: #f7f7f7;
-    border-radius: 8px;
+    background: #06470c      ;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-right: 0;
     /* Asegura que no haya espacio adicional al final de las tarjetas */
@@ -290,19 +275,14 @@ body, html {
     margin: 0 auto; /* Centrar el contenido */  }
 
   .project-image {
-    width: 100%;
-    height: 200px;
+    width: 820px;
+    height: 190px;
     /* Ajusta la altura de la imagen */
     overflow: hidden;
-    margin-bottom: 10px;
-    /* Espacio entre la imagen y el contenido */
-  }
-
-  .project-image:img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    /* Asegura que la imagen cubra todo el espacio sin deformarse */
+    margin-bottom: 5px;
+    /* Espacio entre la imagen y el contenido */
+    
   }
 
   .swiper-slide:nth-child(3n) {
@@ -329,4 +309,20 @@ body, html {
   width: 100%; /* Asegúrate de que la sección ocupe el 100% del ancho */
 }
 
+.tags img {
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: auto;
+  margin: 5px; /* Espaciado entre logos */
+}
+
+.project-title {
+  color: white; /* Cambia el color del título a blanco */
+  font-size: 1.3em; /* Ajusta el tamaño del título si es necesario */
+  margin: 10px 0; /* Añade un margen para mejor espaciado */
+}
+
+.project-description {
+  color: white; /* Cambia el color de la descripción a blanco */
+  font-size: 0.9em; /* Ajusta el tamaño de la descripción si es necesario */
+  margin: 10px 0; /* Añade un margen para mejor espaciado */
 }

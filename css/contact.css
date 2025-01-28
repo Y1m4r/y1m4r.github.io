@@ -1,43 +1,47 @@
-
-.contact-section {
-  display:flex ;
-  justify-content: space-between;
-  align-items: flex-start;  
-  gap: 20px; /* Reducir el espacio entre los dos contenedores */
-  padding: 10px;  
+/* Asegúrate de que el body no tenga margen ni padding */
+body {
   margin: 0;
-  background-color: black;
-  color:var(--color4);
-
+  padding: 0;
+  background-color: black; /* Fondo negro para toda la página */
 }
 
+.contact-section {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  gap: 20px;
+  padding: 50px 10px; /* Aumentar el padding superior e inferior */
+  margin: 0 auto; /* Margen automático para centrar la sección */
+  background-color: black; /* Fondo negro */
+  color: var(--color4);
+  max-width: 1200px; /* Limitar el ancho máximo para que no se extienda demasiado */
+  width: 100%; /* Asegurar que ocupe el 100% del ancho disponible */
+}
 
+/* Resto del CSS (sin cambios) */
 .contact-content h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color:var(--color4);
-
+  color: var(--color4);
 }
 
 .contact-content p {
   font-size: 1rem;
-  color:var(--color4);
+  color: var(--color4);
 }
 
 .contact-left {
   flex: 1;
   max-width: 48%;
-  padding: 0; /* Elimina el padding extra si lo hay */
-  flex-direction: column;  /* Para alinear los elementos dentro de cada columna */
-
+  padding: 0;
+  flex-direction: column;
 }
 
 .contact-right {
   flex: 1;
   max-width: 48%;
-  padding: 0; /* Elimina el padding extra si lo hay */
-  flex-direction: column;  /* Para alinear los elementos dentro de cada columna */
-
+  padding: 0;
+  flex-direction: column;
 }
 
 .contact-left h2 {
@@ -65,35 +69,35 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
-  margin: 0; /* Asegura que no haya márgenes extra */
-
+  margin: 0;
 }
 
 .contact-form label {
-  font-size: 1rem;
-  color: #333;
+  font-size: 0.9rem; /* Reducir el tamaño de la fuente de las etiquetas */
+  color:var(--color4);
 }
 
 .contact-form input, .contact-form textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  padding: 8px; /* Reducir el padding */
+  font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+  border: 1px solid black; /* Borde negro */
   border-radius: 5px;
   width: 100%;
 }
 
 .contact-form textarea {
   resize: vertical;
-  height: 150px;
+  height: 120px; /* Reducir la altura del textarea */
 }
 
 #submit-btn {
   background-color: #6812EA;
   color: white;
-  padding: 10px 15px;
+  padding: 8px 12px; /* Reducir el padding */
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 0.9rem; /* Reducir el tamaño de la fuente */
 }
 
 #submit-btn:hover {
@@ -108,4 +112,31 @@
   margin-top: 15px;
   text-align: center;
   color: green;
+}
+
+/* Contenedor de los logos */
+.socials {
+  display: flex;
+  gap: 15px; /* Espacio entre los logos */
+  margin-top: 20px;
+}
+
+/* Estilos para los enlaces (social-link) */
+.social-link {
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Efecto de escala al pasar el mouse */
+}
+
+/* Estilos para las imágenes de los logos */
+.social-logo {
+  width: 48px; /* Tamaño pequeño para los logos */
+  height: 48px;
+  filter: brightness(0) invert(1); /* Cambia el color de los logos a blanco */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse sobre los logos */
+.social-link:hover .social-logo {
+  transform: scale(1.1); /* Escala ligeramente el logo */
+  filter: brightness(0) invert(0.8); /* Cambia el color al pasar el mouse */
 }
