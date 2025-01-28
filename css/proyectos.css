@@ -1,5 +1,6 @@
 body, html {
   overflow-x: hidden; /* Desactiva el desbordamiento horizontal */
+  scroll-behavior: smooth;
 }
 .section-proyectos {
   background-color: var(--color3);

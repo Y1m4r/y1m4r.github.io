@@ -30,7 +30,7 @@
           <li><a href="#inicio">Home</a></li>
           <li><a href="#AboutMe">About Me</a></li>
           <li><a href="#proyectos">Projects</a></li>
-          <li><a href="#contacto">Contact me</a></li>
+          <li><a href="#contact">Contact me</a></li>
           <li><a href="./blog">Blog</a></li>
         </ul>
 
@@ -437,20 +437,25 @@
     }
 
     function switchControl(activeId, inactiveId, targetSectionId) {
+      // Prevenir el comportamiento por defecto de desplazamiento
+      event.preventDefault();
+
+      // Activar el control seleccionado y desactivar el otro
       document.getElementById(activeId).classList.add("controlActive");
       document.getElementById(inactiveId).classList.remove("controlActive");
 
+      // Ocultar todas las secciones de proyectos
       const sections = document.querySelectorAll("section[id$='projects']");
       sections.forEach((section) => {
         section.classList.add("section-hidden");
         section.classList.remove("section-visible");
       });
 
+      // Mostrar la sección objetivo
       const targetSection = document.getElementById(targetSectionId);
       if (targetSection) {
         targetSection.classList.remove("section-hidden");
         targetSection.classList.add("section-visible");
-        targetSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
 
