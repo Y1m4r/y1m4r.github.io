@@ -74,6 +74,19 @@
   height: 32px;
 }
 
+.socials {
+  display: flex;
+  gap: 10px; /* Espacio entre los logos */
+  margin-top: 15px;
+}
+/* Estilos para las imágenes de los logos */
+.social-logo {
+  width: 58px; /* Tamaño pequeño para los logos */
+  height: 58px;
+  filter: brightness(0) invert(1); /* Cambia el color de los logos a blanco */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+}
+
 @media screen and (min-width: 768px) {
   .imagen-section-inicio {
     max-width: 400px;
