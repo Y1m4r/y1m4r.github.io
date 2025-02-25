@@ -9,12 +9,10 @@ body, html {
 }
 .section-proyectos {
   text-align: center;
-  max-width: 1220px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-
 
 .section-proyectos h1 {
   color: var(--color2);
@@ -267,7 +265,7 @@ body, html {
     /* Centrar el contenido dentro de la tarjeta */
     justify-content: space-between;
     padding: 15px;
-    background: #06470c      ;
+    background: #1e3d1d      ;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Asegura que no haya espacio adicional al final de las tarjetas */

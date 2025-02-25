@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Yimar Tamayo, Professional in Cybersecurity | Ethical Hacking." />
   <title>Yimar Tamayo</title>
   <link rel="shortcut icon" href="./img/ICO YT.jpeg" />
@@ -21,14 +22,14 @@
 <body>
   <header>
     <div class="wrapper-header">
-      <img class="logo" src="./img/ICO-YT.jpeg" alt="logo YT DISEÑO" />
-      <h2>Yimar Tamayo</h2>
-      <span id="abrir" class="icon-menu"></span>
-      <nav id="menu" class="menu">
-        <span id="cerrar" class="icon-cross"></span>
+      <img class="logo" src="./img/ICO-YT.jpeg" alt="Logo de Yimar Tamayo" />
+      <h1>Yimar Tamayo</h1>
+      <button id="abrir" class="icon-menu" aria-label="Abrir menú"></button>
+      <nav id="menu" class="menu" aria-label="Menú principal">
+        <button id="cerrar" class="icon-cross" aria-label="Cerrar menú"></button>
         <ul class="lista-menu">
           <li><a href="#inicio">Home</a></li>
-          <li><a href="#AboutMe">About Me</a></li>
+          <li><a href="#about-me">About Me</a></li>
           <li><a href="#proyectos">Projects</a></li>
           <li><a href="#contact">Contact me</a></li>
           <li><a href="./blog">Blog</a></li>
@@ -48,14 +49,12 @@
             <h1 class="section-inicio-title">Hello, I'm <span id="typewriter"></span></h1>
 
             <p class="section-inicio-description">
-              Unleashing creativity through ethical hacking! Here, I share hands-on experience in CyberSecurity, CTF
-              write-ups, and security tools.
-              Passionate about learning, growing, and collaborating to turn challenges into impactful results. Let’s
-              make cybersecurity extraordinary!</p>
+              Curiosity drives me, creativity empowers me. I turn risk into peace; identifying threats and crafting solutions to build a safer digital world.
+              Here, I share my journey in cybersecurity: projects, certifications, and CTFs. Always learning, growing, and transforming challenges into meaningful impact. </p>
             <div class="socials">
               <a href="https://github.com/Y1m4r" target="_blank" class="social-link">
                 <img src="./img/logogithub.png" alt="GitHub" class="social-logo"></a>
-              <a href="https://www.linkedin.com/yimart" target="_blank" class="social-link">
+              <a href="https://www.linkedin.com/in/yimart/" target="_blank" class="social-link">
                 <img src="./img/logolinkedin.png" alt="GitHub" class="social-logo"></a>
             </div>
           </div>
@@ -64,19 +63,16 @@
       </div>
     </section>
 
-    <section id="AboutMe" class="section-about-me">
+    <section id="about-me" class="section-about-me">
       <div class="about-me-content">
+        <div class="image-container">
+          <img class="imagen-section-aboutme" src="./img/my_avatar2.jpg" alt="my_avatar2">
+        </div>
         <div class="text-and-buttons">
           <h1>About Me</h1>
-          <p>I'm a passionate cybersecurity professional and software engineer, graduated from Icesi University. With
-            experience as a Security Analyst, I specialize in ethical hacking, identifying potential risks, and
-            implementing secure solutions to safeguard systems.
-
-            My curiosity drives my passion for cybersecurity, where I’ve worked on diverse projects, from penetration
-            testing to vulnerability assessments. Proficient in tools like Metasploit and Burpsuite, and knowledgeable
-            in
-            frameworks like OWASP and ISO 27001, I’m dedicated to creating safer digital spaces and contributing my
-            expertise to meaningful roles.
+          <p>I'm a passionate cybersecurity professional and software engineer, graduated from Icesi University. with a strong focus on ethical hacking.
+            As a Security Analyst, I’ve tackled diverse challenges, from penetration testing to IAM implementation, identifying risks and fortifying defenses
+            Skilled in tools like Metasploit and BurpSuite and well-versed in frameworks like OWASP and NIST, I’m driven by curiosity and a commitment to building safer digital environments.
           </p>
 
           <!-- Navigation Menu -->
@@ -166,10 +162,6 @@
             </div>
           </div>
         </div>
-
-        <div class="image-container">
-          <img class="imagen-section-aboutme" src="./img/my_avatar2.jpg" alt="my_avatar2">
-        </div>
       </div>
     </section>
 
@@ -184,6 +176,7 @@
             </p>
           </div>
         </div>
+
         <!-- Proyectos de Seguridad -->
         <section id="security-projects" class="section-visible">
           <div class="swiper-container">
@@ -191,29 +184,21 @@
               <div class="swiper-slide">
                 <a href="https://y1m4r.github.io/blog/build-a-SIEM-in-a-homelab/" class="project-link">
                   <div class="project-image">
-                    <img src="./img/siemprojectt.jpg" alt="">
+                    <img src="./img/homelabsiem.webp" alt="">
                   </div>
                   <a class="project-title">Siem Laboratory</a>
                   <p class="project-description">A step-by-step guide to setting up a home SIEM lab with Elastic and
-                    Kali Linux for SOC analyst practice. </p>
-                  <div class="tags">
-                    <!-- <img src="./img/logo-elastic.png" alt="Elastic Search"> -->
-                  </div>
+                    Kali Linux for SOC analyst practice.</p>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="https://y1m4r.github.io/blog/pwd-brute-forcer-python/" class="project-link">
                   <div class="project-image">
-                    <img src="./img/bruteforcee.jpg" alt="">
+                    <img src="./img/forceaccess.webp" alt="">
                   </div>
                   <a class="project-title">Brute Force Script</a>
                   <p class="project-description">A Python script that brute-forces passwords from 1 to 7 characters
-                    using
-                    lowercase letters and
-                    numbers. </p>
-                  <div class="tags">
-                    <!-- <img src="./img/logo-python.png" alt="python"> -->
-                  </div>
+                    using lowercase letters and numbers.</p>
                 </a>
               </div>
               <div class="swiper-slide">
@@ -223,62 +208,51 @@
                   </div>
                   <a class="project-title">Write-Ups CTFs</a>
                   <p class="project-description">Explain CTFs solutions.</p>
-                  <div class="tags">
-                    <!--  <img src="./img/logo-nmap.png" alt="nmap">  -->
-                    <!-- <img src="./img/logo-metasploit.jpg" alt="Metasploit"> -->
-                    <!--<img src="./img/logo-burpsuite.png" alt="BurpSuite"> -->
-                  </div>
                 </a>
               </div>
             </div>
           </div>
+        </section>
+
+        <!-- Proyectos de Software -->
+        <section id="software-projects" class="section-hidden">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="https://github.com/Y1m4r/Pick_Up_PC" class="project-link">
+                  <div class="project-image">
+                    <img src="./img/pickup1.webp" alt="">
+                  </div>
+                  <a class="project-title">PickUp PC</a>
+                  <p class="project-description">Computer loan service for the Icesi University</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="https://github.com/y1m4r/Contacts_Schedule" class="project-link">
+                  <div class="project-image">
+                    <img src="./img/agenda1.webp" alt="">
+                  </div>
+                  <a class="project-title">Contacts Schedule</a>
+                  <p class="project-description">An agenda for university students</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
 
-    <!-- Proyectos de Software -->
-    <section id="software-projects" class="section-hidden">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <a href="https://github.com/Y1m4r/Pick_Up_PC" class="project-link">
-              <div class="project-image">
-                <img src="./img/pickuppc1.PNG" alt="">
-                <img src="./img/pickuppc2.PNG" alt="">
-              </div>
-              <a class="project-title">PickUp PC</a>
-              <p class="project-description">Computer loan service for the Icesi University</p>
-              <div class="tags">
-                <!-- <img src="./img/logo-elastic.png" alt="Elastic Search"> -->
-              </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://github.com/y1m4r/Contacts_Schedule" class="project-link">
-              <div class="project-image">
-                <img src="./img/contactsproject.png" alt="">
-              </div>
-              <a class="project-title">Contacts Schedule</a>
-              <p class="project-description">An agenda for university students</p>
-              <div class="tags">
-                <!-- <img src="./img/logo-python.png" alt="python"> -->
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-    </section>
 
     <section id="contact" class="contact-section">
       <div class="contact-left">
         <h2>Let's Connect!</h2>
-        <p>Great things always start with a chat! Whether you’re a recruiter, a tech fan, or a creative partner, I’d love to hear from you. 
+        <p>Great things always start with a chat! Whether you’re a recruiter, a tech fan, or a creative partner, I’d
+          love to hear from you.
           Let’s make awesome ideas happen together. </p>
         <div class="socials">
           <a href="https://github.com/y1m4r" target="_blank" class="social-link">
             <img src="./img/logogithub.png" alt="GitHub" class="social-logo"></a>
-          <a href="https://www.linkedin.com/yimart" target="_blank" class="social-link">
+          <a href="https://www.linkedin.com/in/yimart/" target="_blank" class="social-link">
             <img src="./img/logolinkedin.png" alt="GitHub" class="social-logo"></a>
         </div>
       </div>
@@ -308,10 +282,11 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="logo">
-          <img src="logo.png" alt="Logo">
+          <img src="./img/ICO-YT.jpeg" alt="Logo">
         </div>
         <div class="derechos">
-          <p>© 2024 Yimar Tamayo. All rights reserved. This website and its content are protected under copyright law. Unauthorized use, reproduction, or 
+          <p>© 2024 Yimar Tamayo. All rights reserved. This website and its content are protected under copyright law.
+            Unauthorized use, reproduction, or
             distribution is strictly prohibited. For permissions or inquiries, please contact us directly.
           </p>
           <a href="https://google.com" target="_blank"></a>
@@ -322,6 +297,48 @@
 
 
   <script src="./js/main.js" defer></script>
+
+  <script>
+    // Selección de elementos
+    const abrirBtn = document.getElementById('abrir');
+    const cerrarBtn = document.getElementById('cerrar');
+    const menu = document.getElementById('menu');
+    const enlaces = menu.querySelectorAll('a');
+
+    function toggleMenu() {
+      // Solo ejecutar en vista móvil (menos de 768px)
+      if (window.innerWidth >= 768) return;
+
+      menu.classList.toggle('visible');
+      document.body.classList.toggle('no-scroll');
+      abrirBtn.style.display = menu.classList.contains('visible') ? 'none' : 'block';
+    }
+
+    // Event listeners
+    abrirBtn.addEventListener('click', toggleMenu);
+    cerrarBtn.addEventListener('click', toggleMenu);
+    enlaces.forEach(enlace => enlace.addEventListener('click', toggleMenu));
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth >= 768) return;
+      if (!menu.contains(e.target) && e.target !== abrirBtn) {
+        menu.classList.remove('visible');
+        document.body.classList.remove('no-scroll');
+        abrirBtn.style.display = 'block';
+      }
+    });
+
+    // Cerrar con ESC solo en móvil
+    document.addEventListener('keydown', (e) => {
+      if (window.innerWidth >= 768) return;
+      if (e.key === 'Escape' && menu.classList.contains('visible')) {
+        toggleMenu();
+      }
+    });
+  </script>
+
+
 
   <!-- Animación de texto -->
   <script>
@@ -403,6 +420,7 @@
 
   <!-- Inicialización de Swiper y manejo de secciones -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script>
     function initializeSwiper() {
       const swiperContainers = document.querySelectorAll('.swiper-container');
@@ -437,26 +455,30 @@
     }
 
     function switchControl(activeId, inactiveId, targetSectionId, event) {
-      if (event) event.preventDefault(); // Asegúrate de prevenir el comportamiento por defecto
+      if (event) event.preventDefault(); // Prevenir comportamiento por defecto si aplica
+
+      const activeControl = document.getElementById(activeId);
+      const inactiveControl = document.getElementById(inactiveId);
+      const targetSection = document.getElementById(targetSectionId);
+
+      if (!activeControl || !inactiveControl || !targetSection) {
+        console.warn("Uno o más elementos no fueron encontrados.");
+        return;
+      }
 
       // Activar el control seleccionado y desactivar el otro
-      document.getElementById(activeId).classList.add("controlActive");
-      document.getElementById(inactiveId).classList.remove("controlActive");
+      activeControl.classList.add("controlActive");
+      inactiveControl.classList.remove("controlActive");
 
       // Ocultar todas las secciones de proyectos
-      const sections = document.querySelectorAll("section[id$='projects']");
-      sections.forEach((section) => {
-        section.classList.add("section-hidden");
-        section.classList.remove("section-visible");
+      document.querySelectorAll("section[id$='projects']").forEach((section) => {
+        section.classList.replace("section-visible", "section-hidden");
       });
 
       // Mostrar la sección objetivo
-      const targetSection = document.getElementById(targetSectionId);
-      if (targetSection) {
-        targetSection.classList.remove("section-hidden");
-        targetSection.classList.add("section-visible");
-      }
+      targetSection.classList.replace("section-hidden", "section-visible");
     }
+
 
 
     document.addEventListener("DOMContentLoaded", () => {

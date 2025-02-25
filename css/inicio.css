@@ -1,20 +1,18 @@
 .section-inicio {
   background-color: black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  padding: 20px 0;
 }
 
 .wrapper {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1300px;
+  margin: 0 auto 0 auto; /* Asegura que no tenga margen superior */
+  padding: 0 15px;
+  padding-top: -10px;
+
 }
 
 .div-inicio {
@@ -76,8 +74,9 @@
 
 .socials {
   display: flex;
-  gap: 10px; /* Espacio entre los logos */
-  margin-top: 15px;
+  gap: 15px; /* Espacio entre los logos */
+  margin-top: 20px;
+  justify-content: center;
 }
 /* Estilos para las imágenes de los logos */
 .social-logo {
@@ -87,7 +86,15 @@
   transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
 }
 
+
+
 @media screen and (min-width: 768px) {
+
+  .div-inicio {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 50px;
+  }
   .imagen-section-inicio {
     max-width: 400px;
   }
@@ -104,6 +111,12 @@
     font-size: 1.1rem;
     max-width: 600px;
   }
+  
+  .main-section-inicio-content {
+    align-items: center;
+    text-align: center; 
+  }
+ 
 }
 
 @media screen and (min-width: 1024px) {
@@ -114,7 +127,7 @@
   }
 
   .imagen-section-inicio {
-    max-width: 600px;
+    max-width: 550px;
   }
 
   .section-inicio-title {
@@ -175,5 +188,9 @@
     background-color: var(--color8);
   }
 
-  
+  .socials {
+    justify-content: start; /* Alinea los botones a la izquierda */
+    position: relative; /* Permite usar left */
+    left: -10px; /* Ajusta este valor según lo que necesites */
+  }
 }

@@ -1,26 +1,30 @@
 .section-about-me {
   background-color: black;
   text-align: center;
-  padding: 4.5rem 1.5rem 4rem;
+  padding: 3.5rem 1.5rem 3rem;
   color: var(--color4);
   gap: 48px;
   background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;  /* Elementos en orden natural (primero el avatar) */
   align-items: center; /* Alinea todos los elementos en el centro */
   
 }
 
 .about-me-content {
   display: flex;
-  flex-direction: row-reverse; /* Divide la sección en 2 columnas */
-  justify-content: space-between;
+  flex-direction: column;
   gap: 30px;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   width: 100%;
   max-width: 100%; /* Limita el ancho de la sección */
   color: var(--color4);
   margin-top: 60px;
+}
+
+.div-inicio {
+  margin-top: -30px; /* Reduce el espacio extra */
 }
 
 .text-and-buttons {
@@ -28,7 +32,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
+  max-width: 90%; /* Limita el ancho para evitar que el texto se expanda demasiado */
+
 }
 
 .text-and-buttons h1 {
@@ -47,9 +52,11 @@
 
 .image-container {
   flex: 1;
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
+  width: 400px; /* Fija el tamaño para evitar movimientos */
+  height: 400px;
 }
 
 
@@ -104,7 +111,7 @@ h4 {
 
 .menu-about-me {
   display:flex;
-  flex-direction: row;  /* Los botones en fila */
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 20px; /* Espaciado entre botones y contenido de la pestaña */
 
@@ -128,32 +135,37 @@ h4 {
 
 .tab-content {
   width: 100%; /* Ajusta al ancho completo del contenedor */
-  height: 60%;
   display: none;
   text-align:justify;
-  padding: 0px;
-  margin-top: 0; /* Asegúrate de que no haya margen adicional */
-
+  margin: 0 auto; /* Centra el contenido */
+  
 }
 
 .tab-content.active {
-  display: block;
+  display: flex;
+  flex-direction: column; /* Asegura que todo el contenido fluya de arriba hacia abajo */
+  align-items: left;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 40px 40px 35px 40px 40px 40px 40px 40px; /* Define un tamaño fijo para cada columna */
-
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); /* Se ajusta dinámicamente */
   gap: 25px;
+  justify-content: center;
   align-items: center;
+  max-width: 600px; /* Controla que no se desborde */
+  overflow: hidden; /* Evita que elementos se salgan */
+  width: 100%; /* Se ajusta al tamaño del `.tab-content.active` */
+
 }
 
 .grid img {
-  width: 119%; /* Tamaño ajustado para que sean más pequeñas */
+  width: 100%; /* Tamaño ajustado para que sean más pequeñas */
   max-width: 100px; /* Asegura que las imágenes no se expandan demasiado, manteniendo un tamaño adecuado y consistente.
   height: auto; /* Asegura que la imagen sea cuadrada */
-  object-fit: cover; /* Recorta proporcionalmente el contenido */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+  object-fit: contain;
+
 }
 
 .grid2 {
@@ -168,7 +180,7 @@ h4 {
   width: 333%; /* Tamaño ajustado para que sean más pequeñas */
   max-width: 350px; /* Asegura que las imágenes no se expandan demasiado, manteniendo un tamaño adecuado y consistente.
   height: auto; /* Asegura que la imagen sea cuadrada */
-  object-fit: cover; /* Recorta proporcionalmente el contenido */
+  object-fit: contain;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
 }
 
@@ -195,31 +207,10 @@ h4 {
 
 }
 
-@media screen and (min-width: 768px) {
-  .section-about-me h1 {
-    font-size: 1.8rem;
-  }
-
-  .section-about-me p {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-  .texto-formacion p {
-    font-size: 0.9rem;
-  }
-}
 
 @media screen and (min-width: 1024px) {
-  .info {
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    max-width: 1200px;
+  .about-me-content {
+    min-height: 500px; /* Ajusta esto según el contenido */
   }
 
   .section-about-me h1 {
@@ -246,5 +237,32 @@ h4 {
 
   .texto-formacion p {
     font-size: 1.1rem;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-content {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .section-about-me h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-about-me p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .texto-formacion p {
+    font-size: 0.9rem;
   }
 }
