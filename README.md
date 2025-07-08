@@ -10,7 +10,7 @@
 **Experiencia adaptativa:** Interfaz fluida y responsiva, diseñada para ofrecer una navegación cómoda desde cualquier dispositivo.
 
 ## 🛠 Tecnologías y Herramientas Utilizadas
-**React + Vite:**Estructura moderna del sitio, con Hot Module Replacement (HMR) para una experiencia de desarrollo rápida y eficiente.
+**React + Vite:** Estructura moderna del sitio, con Hot Module Replacement (HMR) para una experiencia de desarrollo rápida y eficiente.
 
 **JavaScript:** Añade interactividad dinámica a cada sección del portafolio.
 
