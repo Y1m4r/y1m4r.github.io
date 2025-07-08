@@ -15,7 +15,7 @@ export default function App() {
     document.body.className = isDarkMode ? "dark-mode" : "light-mode";
   }, [isDarkMode]);
 
-  // Si no hay reCAPTCHA site key, funciona sin reCAPTCHA
+  // Si no hay reCAPTCHA_SITE_KEY, funciona sin reCAPTCHA
   if (!RECAPTCHA_SITE_KEY) {
     console.warn('reCAPTCHA Site Key no configurada. El formulario funcionará sin protección reCAPTCHA.');
     return <AppRouter />;
