@@ -1,0 +1,38 @@
+{
+    "navbar": {
+        "main": "Inicio",
+        "projects": "Proyectos",
+        "about": "Acerca",
+        "education": "Educacion",
+        "contact": "Contacto",
+        "label-language": "Ingles",
+        "label-light": "Claro",
+        "label-dark": "Oscuro",
+         "btn-back": "Volver atras"
+    },
+    "projects": {
+        "btn1-card": "Anterior",
+        "btn2-card": "Siguiente",
+        "option-learn": "Leer mas",
+        "option-hide": "Ocultar",
+        "option-seeweb": "Ver sitio web",
+        "option-viewRepo": "Ver repositorio",
+        "development-process": "Proceso de desarrollo",
+        "objective": "Objetivo",
+        "development": "Proceso de desarrollo",
+        "conclusion": "Conclusión"
+    },
+    "github": {
+        "repositories": "Repositorios Publicos",
+        "stars": "Estrellas Recibidas",
+        "followers": "Seguidores",
+        "commits": "Commits Totales"
+    },
+    "recaptcha": {
+        "info": "Este sitio está protegido por reCAPTCHA y se aplican la <1>Política de Privacidad</1> y los <3>Términos de Servicio</3> de Google."
+    },
+    "footer": {
+        "text-copyright": "Desarrollado por ",
+        "text-end": "Todos los derechos reservados. Para permisos o consultas, por favor contáctenos directamente."
+    }
+}

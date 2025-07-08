@@ -1,0 +1,295 @@
+input[type="radio"] {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.filters {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 3px;
+  padding-inline: 6px;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 10px;
+  height: 48px;
+}
+
+.otherFilters {
+  border: none;
+  gap: 4px;
+  padding-inline: 0px;
+}
+
+/* Variantes específicas para diferentes secciones */
+.aboutFilters {
+  margin-left: -11.25px;
+  margin-bottom: 4px;
+}
+
+.projectsFilters {
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+.filters > div:not(.highlight) {
+  height: 100%;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+  font-weight: var(--label-weight);
+  gap: 8px;
+  color: var(--text-secondary);
+  transition: var(--dynamic-fast-transition);
+  z-index: 1;
+}
+
+.label::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0.8);
+  width: 100%;
+  height: 32px;
+  background: var(--text-primary-transparent);
+  border: 1px solid var(--text-primary-transparent);
+  border-radius: 15px;
+  z-index: 0;
+  opacity: 0;
+  transition: var(--dynamic-fast-transition) transform;
+}
+
+.otherLabel {
+  font-size: 12px;
+}
+
+.label svg path {
+  stroke: var(--text-secondary);
+  pointer-events: none;
+}
+
+.label span,
+.label svg {
+  position: relative;
+  z-index: 2;
+}
+
+.label.active svg path {
+  stroke: var(--text-primary);
+  transition: var(--dynamic-fast-transition);
+}
+
+.label.active {
+  color: var(--text-primary);
+  font-weight: normal;
+}
+
+.otherLabel.active {
+  color: var(--text-primary);
+  stroke: var(--text-primary);
+  font-weight: normal;
+}
+
+.otherLabel.active svg path {
+  stroke: var(--text-primary);
+  transition: var(--dynamic-fast-transition);
+}
+
+.filters:not(.small) .label.active > svg {
+  opacity: 1;
+}
+
+.label:not(.active) {
+  cursor: pointer;
+}
+
+/* Añade un separador después de cada label, excepto el último */
+.label:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  right: -3px; /* Ajusta la posición según el gap */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 25px;
+  border-radius: 5px;
+  background: var(--color-primary-light);
+}
+
+/* Si usas la variante compacta, puedes querer ocultarlo */
+.otherLabel:not(:last-of-type)::after {
+  display: none;
+}
+
+.label:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+.label:hover:not(.active) path {
+  stroke: var(--text-primary);
+}
+
+.label:hover:not(.active)::before {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+.line {
+  width: 1px;
+  min-width: 1px;
+  height: 25px;
+  border-radius: 5px;
+  background: var(--color-primary-light);
+}
+
+.highlight {
+  position: absolute;
+  height: 32px;
+  top: 7px;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--transparent-primary-light),
+    var(--hover-primary-light)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--hover-primary-light);
+  border-radius: 10px;
+  pointer-events: none;
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 0;
+}
+
+.highlightOther {
+  top: 7px;
+  background: linear-gradient(
+    to bottom,
+    var(--transparent-primary-light),
+    var(--hover-primary-light)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--hover-primary-light);
+}
+
+.highlight.glow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    #fff,
+    var(--color-primary),
+    var(--surface-primary),
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-primary),
+    var(--surface-primary),
+    var(--color-primary),
+    #fff
+  );
+  background-size: 800%;
+  border-radius: 8px;
+  filter: blur(10px);
+  animation: glowing 25s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media (width <=1324px) {
+  .label {
+    padding: 0 12px;
+    gap: 6px;
+  }
+  
+  .otherLabel {
+    padding: 0 10px;
+  }
+}
+
+@media (width <=768px) {
+  .label {
+    padding: 0 10px;
+    gap: 5px;
+    font-size: 12px;
+  }
+  
+  .otherLabel {
+    font-size: 11px;
+    padding: 0 8px;
+  }
+  
+  .label svg, .otherLabel svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Ocultar texto en pantallas pequeñas para mostrar solo íconos */
+@media (width <= 480px) {
+  .label span, .otherLabel span {
+    display: none;
+  }
+  
+  .label {
+    padding: 0 8px;
+    min-width: 40px;
+    justify-content: center;
+  }
+  
+  .otherLabel {
+    padding: 0 6px;
+    min-width: 32px;
+    justify-content: center;
+  }
+  
+  /* Ajustar el contenedor para que se adapte mejor */
+  .filters {
+    gap: 6px;
+    padding-inline: 4px;
+  }
+  
+  /* Margin específico para About en responsive */
+  .aboutFilters {
+    margin-left: 18%;
+  }
+  
+  /* Margin específico para Projects en responsive - movido al lado derecho */
+  .projectsFilters {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  
+  .otherFilters {
+    gap: 3px;
+  }
+}

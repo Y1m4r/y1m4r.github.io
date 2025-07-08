@@ -1,0 +1,33 @@
+{
+    "head": {
+        "title": "¡Conectemos!"
+    },
+    "connect": {
+        "strong1": "¡Las grandes cosas siempre empiezan con una charla!",
+        "text": "Ya seas un reclutador, un fan de la tecnología o un socio creativo, me encantaría saber de ti.",
+        "strong2": "Hagamos que las ideas increíbles se hagan realidad juntos."
+    },
+    "contact": {
+        "title-state1": "Dejame un mensaje",
+        "title-state2": "¡Gracias por tu mensaje!",
+        "name-placeholder": "¿Cómo te llamás?",
+        "name-error": "Completá con tu nombre",
+        "email-placeholder": "Email",
+        "email-error": "Dejame un email válido",
+        "textarea-placeholder": "¿Cómo podemos colaborar?",
+        "textarea-error": "Compartime tu propuesta antes de enviar",
+        "btn-send": "Enviar"
+    },
+    "notifications": {
+        "validation-error": "Por favor completa todos los campos correctamente.",
+        "recaptcha-verifying": "Verificando que no eres un robot...",
+        "success": "¡Mensaje enviado! Te responderé pronto.",
+        "error-default": "Error al enviar el mensaje. Inténtalo nuevamente.",
+        "error-config": "Error de configuración.",
+        "error-template": "Error de configuración del template.",
+        "error-service": "Error de configuración del servicio.",
+        "error-recaptcha": "Error de verificación de seguridad. Inténtalo nuevamente.",
+        "error-data": "Error en los datos enviados. Verifica la configuración.",
+        "error-auth": "Error de autenticación."
+    }
+}

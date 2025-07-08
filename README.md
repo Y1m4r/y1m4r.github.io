@@ -1,15 +1,17 @@
-# yimartamayo.github.io
-Portafolio | Yimar Tamayo
+# Portafolio | *Y1m4r*
 
-# Yimar Tamayo - Portfolio Profesional  
 ¡Hola! Bienvenido a mi espacio digital donde comparto mis proyectos y experiencia en Ciberseguridad. Este portfolio es una muestra de mi enfoque en Ethical Hacking y pruebas de penetración.
 
-## 🔎 Explorando Herramientas y Desafíos de Ciberseguridad  
-- **Write-ups de CTFs**: Soluciones detalladas de máquinas y retos de plataformas como Hack The Box, TryHackMe, y más.  
-- **Tutoriales prácticos**: Guías para usar herramientas de seguridad como Burp Suite, Metasploit, Nmap, entre otras.  
-- **Diseño adaptable**: Navega cómodamente desde cualquier dispositivo y una experiencia dinámica gracias a JavaScript. 
+## 🔎 Explorando Herramientas y Desafíos de Ciberseguridad
+**Write-ups de CTFs:** Soluciones detalladas de retos y máquinas en plataformas como Hack The Box, TryHackMe, y otras.
 
-## 🛠 Herramientas y Tecnologías  
-- **HTML5**: Estructura del sitio.  
-- **CSS3**: Diseño y maquetación con Flexbox y Grid.  
-- **JavaScript**: Para agregar funcionalidades interactivas.  
+**Tutoriales prácticos:** Guías para el uso de herramientas como Burp Suite, Metasploit, Nmap, entre muchas más.
+
+**Experiencia adaptativa:** Interfaz fluida y responsiva, diseñada para ofrecer una navegación cómoda desde cualquier dispositivo.
+
+## 🛠 Tecnologías y Herramientas Utilizadas
+**React + Vite:**Estructura moderna del sitio, con Hot Module Replacement (HMR) para una experiencia de desarrollo rápida y eficiente.
+
+**JavaScript:** Añade interactividad dinámica a cada sección del portafolio.
+
+**CSS3 (Flexbox y Grid):** Para un diseño limpio, adaptable y profesional.

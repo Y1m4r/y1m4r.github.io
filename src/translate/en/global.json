@@ -1,0 +1,38 @@
+{
+    "navbar": {
+        "main": "Home",
+        "projects": "Projects",
+        "about": "About",
+        "education": "Education",
+        "contact": "Contact",
+        "label-language": "Spanish",
+        "label-light": "Light",
+        "label-dark": "Dark",
+        "btn-back": "Go back"
+    },
+    "projects": {
+        "btn1-card": "Previous",
+        "btn2-card": "Next",
+        "option-learn": "Learn more",
+        "option-hide": "Hide",
+        "development-process": "Development Process",
+        "objective": "Objective",
+        "development": "Development",
+        "conclusion": "Conclusion",
+        "option-seeweb": "Visit website",
+        "option-viewRepo": "View repository"
+    },
+    "github": {
+        "repositories": "Public Repositories",
+        "stars": "Stars Received",
+        "followers": "Followers",
+        "commits": "Total Commits"
+    },
+    "recaptcha": {
+        "info": "This site is protected by reCAPTCHA and the Google <1>Privacy Policy</1> and <3>Terms of Service</3> apply."
+    },
+    "footer": {
+        "text-copyright": "Developed by ",
+        "text-end": "All rights reserved. For permissions or inquiries, please contact us directly."
+    }
+}

@@ -1,0 +1,85 @@
+.shinyText {
+  color: var(
+    --text-alternative
+  ); /* Adjust this color to change intensity/style */
+  background: linear-gradient(
+    120deg,
+    var(--color-neutral) 40%,
+    var(--text-primary) 50%,
+    var(--color-neutral) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  display: inline-block;
+  animation: shine 5s linear infinite;
+  font-size: 45px;
+  font-weight: 900;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shinyText.disabled {
+  animation: none;
+}
+
+/* Media queries para responsive */
+/* iPad Pro 12.9" landscape y similar */
+@media (width <= 1366px) and (width > 1200px) {
+  .shinyText {
+    font-size: 38px;
+    margin-bottom: 25px;
+  }
+}
+
+/* iPad Pro 11" landscape y tablets grandes */
+@media (width <= 1200px) and (width > 1024px) {
+  .shinyText {
+    font-size: 36px;
+    margin-bottom: 22px;
+  }
+}
+
+/* Tablets regulares y iPad en portrait */
+@media (width <= 1024px) and (width > 900px) {
+  .shinyText {
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
+}
+
+/* Breakpoint específico para tablets */
+@media (width <= 900px) and (width > 768px) {
+  .shinyText {
+    font-size: 32px;
+    margin-bottom: 20px; /* Margen menor para evitar superposición */
+  }
+}
+
+@media (width <= 768px) {
+  .shinyText {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (width <= 480px) {
+  .shinyText {
+    font-size: 24px;
+    margin-bottom: 7px;
+  }
+}
+
+@media (width <= 360px) {
+  .shinyText {
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+}

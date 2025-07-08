@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  padding-inline: max(4vw, 40px);
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (width <= 768px) {
+  .container {
+    padding-inline: 20px;
+  }
+}

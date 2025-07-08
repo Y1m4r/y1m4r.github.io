@@ -1,0 +1,343 @@
+/* === Contenedor Principal === */
+.containerTools {
+  width: 100%;
+  max-width: 650px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 11.25px;
+}
+
+/* === Sección de Herramientas === */
+.tools {
+  position: relative;
+  border: 1px solid var(--color-primary-light);
+  padding: 15px 15px 15px 9px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 550px;
+}
+
+/* Imagen decorativa */
+.tools .img {
+  position: absolute;
+  top: -120px;
+  right: -150px;
+  width: 280px;
+  height: 350px;
+  z-index: -1;
+  object-fit: cover;
+  transform: rotate(1.5deg);
+  opacity: 0.2;
+}
+
+/* === Contenedor de items === */
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.box ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Títulos === */
+.workTag1,
+.workTag2 {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.workTag1 {
+  padding-bottom: 8px;
+}
+
+.workTag2 {
+  margin: 14px 0 8px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Indicador de aprendizaje === */
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 2px;
+  background: var(--color-success);
+  position: relative;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--color-success);
+  opacity: 0.8;
+  animation: 1s ease zoom-in infinite;
+}
+
+@keyframes zoom-in {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* === Media Queries === */
+@media (width <= 1400px) {
+  .containerTools {
+    max-width: 600px;
+  }
+
+  .tools {
+    padding: 20px 20px 20px 20px;
+    max-width: 500px;
+  }
+
+  .tools .img {
+    top: -100px;
+    right: -120px;
+    width: 250px;
+    height: 320px;
+  }
+}
+
+/* Resolución 1280x800 y laptops similares (1201px-1300px) */
+@media (width <= 1300px) and (width > 1200px) {
+  .containerTools {
+    max-width: 580px;
+    margin-left: 5px;
+  }
+
+  .tools {
+    padding: 18px 18px 18px 15px;
+    max-width: 480px;
+  }
+
+  .tools .img {
+    top: -85px;
+    right: -110px;
+    width: 235px;
+    height: 300px;
+  }
+
+  .box ul {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+    justify-items: center;
+  }
+
+  .workTag1,
+  .workTag2 {
+    font-size: 17px;
+  }
+}
+
+@media (width <= 1200px) {
+  .containerTools {
+    max-width: 550px;
+  }
+
+  .tools {
+    padding: 18px 18px 18px 18px;
+    max-width: 450px;
+  }
+
+  .tools .img {
+    top: -80px;
+    right: -100px;
+    width: 220px;
+    height: 280px;
+  }
+}
+
+@media (width <= 1124px) {
+  .containerTools {
+    max-width: 650px;
+    justify-content: center;
+  }
+
+  .tools {
+    padding: 25px 25px 25px 25px;
+    max-width: none;
+    border-radius: 30px;
+  }
+
+  .tools .img {
+    top: -100px;
+    right: -130px;
+    width: 280px;
+    height: 350px;
+  }
+}
+
+/* iPad Mini y tablets pequeñas (745px-768px) */
+@media (width <= 768px) and (width >= 745px) {
+  .containerTools {
+    max-width: 680px;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .tools {
+    padding: 22px;
+    border-radius: 25px;
+    max-width: 620px;
+  }
+
+  .tools .img {
+    top: -85px;
+    right: -105px;
+    width: 245px;
+    height: 305px;
+  }
+
+  .box ul {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .workTag1,
+  .workTag2 {
+    font-size: 17px;
+  }
+}
+
+/* Tablets pequeñas generales (501px-744px) */
+@media (width <= 744px) and (width > 500px) {
+  .containerTools {
+    max-width: 580px;
+    margin-left: 0;
+  }
+
+  .tools {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .tools .img {
+    top: -75px;
+    right: -95px;
+    width: 230px;
+    height: 290px;
+  }
+
+  .box ul {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    justify-items: center;
+  }
+
+  .workTag1,
+  .workTag2 {
+    font-size: 16px;
+  }
+}
+
+/* Dispositivos medianos (431px-500px) */
+@media (width <= 500px) and (width > 430px) {
+  .containerTools {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .tools {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .tools .img {
+    top: -55px;
+    right: -75px;
+    width: 190px;
+    height: 240px;
+  }
+
+  .box ul {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .workTag1,
+  .workTag2 {
+    font-size: 15px;
+  }
+}
+
+/* iPhone 12 Pro y dispositivos similares (376px-430px) */
+@media (width <= 430px) and (width > 375px) {
+  .containerTools {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .tools {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .tools .img {
+    top: -45px;
+    right: -55px;
+    width: 175px;
+    height: 215px;
+  }
+
+  .box ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .workTag1,
+  .workTag2 {
+    font-size: 15px;
+  }
+}
+
+/* iPhone SE y dispositivos muy pequeños */
+@media (width <= 375px) {
+  .containerTools {
+    margin-left: 0;
+  }
+
+  .tools {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .tools .img {
+    top: -40px;
+    right: -50px;
+    width: 160px;
+    height: 200px;
+  }
+
+  .box ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .workTag1,
+  .workTag2 {
+    font-size: 14px;
+  }
+}

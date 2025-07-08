@@ -1,0 +1,70 @@
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  padding: 0 50px; /* Espacio para las flechas de navegación */
+  box-sizing: border-box;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  overflow: visible !important; /* Permite que el glow sobresalga del contenedor */
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Permite que la altura se ajuste al contenido */
+  padding-bottom: 10px; /* Espacio para la sombra de la tarjeta */
+  padding: 25px 0; /* Espacio adicional arriba y abajo para la iluminación */
+}
+
+/* Estilos para las flechas de navegación */
+.swiperButtonPrev,
+.swiperButtonNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: var(--surface-primary-transparent);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 10;
+  border: 1px solid var(--color-primary-light);
+}
+
+.swiperButtonPrev:hover,
+.swiperButtonNext:hover {
+  background-color: var(--hover-primary-light);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiperButtonPrev {
+  left: 0;
+}
+
+.swiperButtonNext {
+  right: 0;
+}
+
+/* Icono de las flechas (SVG de Swiper) */
+.swiperButtonPrev::after,
+.swiperButtonNext::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Ocultar flechas cuando no son necesarias */
+.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+} 

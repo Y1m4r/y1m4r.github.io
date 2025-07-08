@@ -1,0 +1,34 @@
+{
+    "head": {
+        "title": "Let's Connect!"
+      
+    },
+    "connect": {
+        "strong1": "Great things always start with a chat!",
+        "text": "Whether you're a recruiter, a tech fan, or a creative partner, I'd love to hear from you.",
+        "strong2": "Let's make awesome ideas happen together."
+    },
+    "contact": {
+        "title-state1": "Leave me a message",
+        "title-state2": "Thank you for your message!",
+        "name-placeholder": "What's your name?",
+        "name-error": "Please enter your name",
+        "email-placeholder": "Email",
+        "email-error": "Please provide a valid email",
+        "textarea-placeholder": "How can we collaborate?",
+        "textarea-error": "Please share your proposal before sending",
+        "btn-send": "Send"
+    },
+    "notifications": {
+        "validation-error": "Please complete all fields correctly.",
+        "recaptcha-verifying": "Verifying you're not a robot...",
+        "success": "Message sent successfully! I'll get back to you soon.",
+        "error-default": "Error sending message. Please try again.",
+        "error-config": "Configuration error. Please contact the administrator.",
+        "error-template": "Template configuration error.",
+        "error-service": "Service configuration error.",
+        "error-recaptcha": "Security verification error. Please try again.",
+        "error-data": "Error in sent data.",
+        "error-auth": "Authentication error."
+    }
+}

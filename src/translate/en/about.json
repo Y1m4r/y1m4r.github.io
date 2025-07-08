@@ -1,0 +1,64 @@
+{
+    "head": {
+        "title": "About Me",
+        "text-1": "In this section you'll learn a bit about me, my skills and some of my story ",
+        "strong-1": "in case you want to know it! ",
+        "text-2": "I combine design and code to ",
+        "strong-2": "create functional solutions with personality. ",
+        "text-3": "Every step in my journey ",
+        "strong-3": "has been a learning lesson."
+    },
+    "aboutMe": {
+        "option-readMore": "Read more",
+        "skills": "Skills",
+        "learning": "In Learning",
+        "description": "I'm a SWE from Icesi University with a strong passion for cybersecurity and a particular focus on ethical hacking. With experience as an AppSec Engineer and Security Analyst, I've tackled diverse challenges from identifying vulnerabilities and conducting penetration tests to performing secure code reviews. I'm proficient with tools like Metasploit, Burp Suite, and Caido. Currently preparing for the OSCP and CBBH certifications."
+    },
+    "categories": {
+        "skills": {
+            "subtitle": "Languages & Tools I've Worked With"
+        },
+        "education": {
+            "subtitle": "Academic background and professional growth.",
+            "li-1": "B.Sc. in Software Engineering from Icesi University",
+            "li-2": "Professional Certificate in Ethical Hacking (Red, Blue & Purple Team) - UdeCatalunya",
+            "li-3": "Hackers Academy by Hackmetrix."
+        },
+        "certifications": {
+            "subtitle": "Professional certifications in cybersecurity and ethical hacking"
+        },
+        "achievements": {
+            "subtitle": "Notable accomplishments and recognition in cybersecurity",
+            "li-1": "PortSwigger Academy",
+            "li-2": "Advent of Cyber 2024 - TryHackMe"
+        }
+    },
+    "toolsCaption": {
+        "kalilinux": "Linux distribution for pentesting",
+        "parrotos": "Operating system for security",
+        "burpsuite": "Web interception proxy",
+        "caido": "Modern web interception proxy",
+        "metasploit": "Exploitation framework",
+        "zapproxy": "Web interception proxy",
+        "wireshark": "Network protocol analyzer",
+        "shodan": "Device search engine",
+        "hackthebox": "Cybersecurity training platform",
+        "python": "Versatile programming language",
+        "bash": "Command line interpreter",
+        "java": "Robust programming language",
+        "go": "Compiled programming language",
+        "js": "Interactive web development",
+        "flutter": "Framework for cross-platform applications",
+        "mysql": "Database management system",
+        "aws": "Cloud computing services",
+        "azure": "Microsoft's cloud platform",
+        "digitalocean": "Cloud infrastructure provider",
+        "nessus": "Vulnerability scanner",
+        "wazuh": "Security platform and SIEM",
+        "vsCode": "Code editor",
+        "cursor": "AI-powered code editor",
+        "git": "Version control",
+        "notion": "Project management and documentation",
+        "slack": "Team communication platform"
+    }
+}

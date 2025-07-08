@@ -1,0 +1,189 @@
+/* === Estilos Generales para About === */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+  scroll-margin-top: clamp(3px, 1vh, 4px);
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  height: 35px;
+  background: transparent;
+  border: 1px solid var(--color-primary-light);
+  border-bottom: 0;
+  border-radius: 30px 30px 0 0;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* === Sección de imagen (lado izquierdo) === */
+.imageSection {
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.imageSection > :first-child {
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  transform: translate(-50%, -50%) scale(1.15);
+  z-index: -1;
+  opacity: 0.65;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  z-index: 1;
+}
+
+.profileImage:hover {
+  transform: scale(1.05);
+}
+
+/* === Media Queries generales === */
+@media (width <= 1400px) {
+  .about::before {
+    max-width: 1300px;
+    height: 32px;
+  }
+
+  .container {
+    max-width: 1100px;
+    gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (width <= 1200px) {
+  .about::before {
+    max-width: 1150px;
+    height: 28px;
+  }
+
+  .container {
+    max-width: 950px;
+    gap: 15px;
+    padding: 12px;
+  }
+}
+
+@media (width <= 1124px) {
+  .about::before {
+    max-width: 1050px;
+    height: 25px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    gap: 30px;
+    padding: 20px 12px;
+  }
+
+  .imageSection {
+    order: 1;
+    max-width: 100%;
+    min-width: auto;
+    margin-bottom: 15px;
+  }
+
+  .profileImage {
+    max-width: 320px;
+    margin-top: 0;
+  }
+}
+
+@media (width <= 768px) {
+  .about {
+    padding: 0 15px;
+  }
+
+  .about::before {
+    height: 25px;
+    width: calc(100% - 30px);
+  }
+
+  .container {
+    gap: 30px;
+    padding: 20px 15px;
+  }
+
+  .imageSection {
+    min-width: 250px;
+    max-width: 400px;
+  }
+
+  .profileImage {
+    max-width: 300px;
+    margin-top: 0;
+  }
+}
+
+@media (width <= 480px) {
+  .about {
+    padding: 0 10px;
+  }
+
+  .about::before {
+    height: 20px;
+    width: calc(100% - 20px);
+  }
+
+  .container {
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .imageSection {
+    min-width: 200px;
+    max-width: 300px;
+  }
+
+  .profileImage {
+    max-width: 250px;
+    margin-top: 0;
+  }
+}

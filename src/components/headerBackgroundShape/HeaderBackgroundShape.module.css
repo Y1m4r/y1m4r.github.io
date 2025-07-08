@@ -1,0 +1,27 @@
+.shape {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%) scale(0.99);
+    right: -150px;
+    z-index: -1; /* Debe estar detrás del contenido */
+    pointer-events: none; /* No debe interferir con los clics */
+  /*  filter: saturate(1.2) contrast(1.0); Aumenta saturación y contraste */
+  }
+  
+  .shape svg circle {
+    fill: var(--color-primary);
+    opacity: 1;
+  }
+  
+  .shape svg path {
+    fill: var(--color-neutral);
+    opacity: 0.9;
+  }
+  
+  @media (width <= 768px) {
+    .shape {
+      top: -50%;
+      right: -50%;
+      transform: translateY(0) scale(1);
+    }
+  }

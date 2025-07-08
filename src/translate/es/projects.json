@@ -1,0 +1,43 @@
+{
+    "head": {
+      "title": "Proyectos",
+
+      "text-1": "",
+      "strong-1": "Bienvenido a mi colección de proyectos. ",
+      "text-2": "Aquí aplico lo que aprendo y experimento con nuevas ideas. Desde herramientas de seguridad y automatización, hasta desarrollos web y juegos, cada proyecto refleja mi pasión por la tecnología, mi enfoque creativo y mi evolución como profesional.",
+      "strong-2": "",
+      "text-3": "",
+      "strong-3": ""
+    },
+    "siem": {
+      "description": "Una guía simple y paso a paso para configurar un laboratorio SIEM casero usando Elastic y Kali Linux. Perfecto para practicar habilidades de analista SOC.",
+      "shortDescription": "Laboratorio SIEM con Elastic y Kali Linux para práctica de analista SOC.",
+      "development": "Construí un entorno SIEM completo usando Elastic Stack para recolección y análisis de logs, integrado con Kali Linux para simulación de ataques. La configuración incluye monitoreo en tiempo real, alertas y flujos de respuesta a incidentes para replicar operaciones de seguridad empresarial."
+    },
+    "bruteforce": {
+      "description": "Un script de Python que realiza ataques de fuerza bruta a contraseñas de 1 a 7 caracteres usando letras minúsculas y números.",
+      "shortDescription": "Script de Python para fuerza bruta de contraseñas de 1-7 caracteres con letras minúsculas y números.",
+      "development": "Desarrollado usando Python con itertools para generación eficiente de combinaciones de caracteres. El script implementa multithreading para optimización del rendimiento e incluye seguimiento del progreso. Características incluyen conjuntos de caracteres personalizables y rangos de longitud de contraseña objetivo."
+    },
+    "writeups": {
+      "description": "Guías comprensivas y tutoriales para varias competencias Capture The Flag en las que he participado.",
+      "shortDescription": "Guías y tutoriales de CTF",
+      "development": "Documento mi enfoque para resolver desafíos CTF en múltiples categorías incluyendo explotación web, criptografía, ingeniería inversa y forenses. Cada writeup incluye metodología, herramientas utilizadas y resultados de aprendizaje para ayudar a otros a entender el proceso de resolución de problemas."
+    },
+    "pickup": {
+      "description": "Una aplicación móvil para servicios de préstamo de computadoras en la Universidad Icesi, construida con Flutter para compatibilidad multiplataforma.",
+      "shortDescription": "App móvil de préstamo de computadoras para la Universidad Icesi",
+      "development": "Desarrollada usando el framework Flutter para compatibilidad iOS y Android. La app incluye autenticación de usuarios, sistema de reserva de equipos, escaneo de códigos QR para identificación de dispositivos, y seguimiento de disponibilidad en tiempo real. Implementa patrones de arquitectura limpia y gestión de estado con Provider."
+    },
+    "contacts": {
+      "description": "Una aplicación completa de gestión de contactos para estudiantes universitarios, construida con Java e implementando estructuras de datos avanzadas.",
+      "shortDescription": "Aplicación de agenda de contactos para estudiantes universitarios",
+      "development": "Construida con Java usando principios de programación orientada a objetos e implementando varias estructuras de datos como listas enlazadas, tablas hash y árboles binarios para almacenamiento y recuperación eficiente de contactos. Las características incluyen categorización de contactos, funcionalidad de búsqueda y persistencia de datos."
+    },
+    "digitalsignature": {
+      "description": "Una aplicación de escritorio Java Swing para firma digital de archivos usando criptografía RSA. Incluye generación de claves, firma de archivos y verificación de autenticidad.",
+      "shortDescription": "Herramienta de escritorio para firma digital de archivos con criptografía RSA",
+      "development": "Desarrollada con Java Swing para la interfaz gráfica e implementando algoritmos RSA para criptografía asimétrica. La aplicación permite generar pares de claves públicas/privadas, firmar archivos digitalmente y verificar la autenticidad de firmas. Incluye manejo seguro de archivos, validación de integridad y interfaz intuitiva para operaciones criptográficas."
+    },
+    "viewProject": "Explorar"
+  }

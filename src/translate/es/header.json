@@ -1,0 +1,12 @@
+{
+    "main": {
+        "title": "¡Hola Compañero! Soy",
+        "state": "¡Buscando nuevos desafíos!",
+        "description": "¡Bienvenido a mi espacio!\nAquí comparto mi viaje en ciberseguridad: proyectos, certificaciones y CTFs. Siempre aprendiendo y creciendo. La curiosidad me impulsa.",
+        "text-1": "Me apasiona transformar ",
+        "strong-1": "ideas creativas en experiencias digitales envolventes, ",
+        "text-2": "enfocándome en mejorar la usabilidad y la accesibilidad mientras diseño interfaces impactantes. Estoy ",
+        "strong-2": "buscando progresar en mi carrera profesional, ",
+        "text-3": "contribuyendo a equipos innovadores mientras sigo aprendiendo y adaptándome a las nuevas tecnologías."
+    }
+}

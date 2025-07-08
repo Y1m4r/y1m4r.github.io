@@ -1,0 +1,45 @@
+{
+    "head": {
+      "title": "Projects",
+      "option-moreOptions": "More options",
+      "option-share": "Share",
+      "option-goUp": "Go up",
+      "text-1": "",
+      "strong-1": "Welcome to my project showcase. ",
+      "text-2": "Here I apply what I learn and experiment with new ideas. From security tools and automation to web development and educational games, each project reflects my passion for technology, creative thinking, and ongoing growth as a professional.",
+      "strong-2": "",
+      "text-3": "",
+      "strong-3": ""
+    },
+    "siem": {
+      "description": "A simple, step-by-step guide to setting up a home SIEM lab using Elastic and Kali Linux. Perfect for practicing SOC analyst skills.",
+      "shortDescription": "SIEM lab setup with Elastic and Kali Linux for SOC analyst practice.",
+      "development": "I built a comprehensive SIEM environment using Elastic Stack for log collection and analysis, integrated with Kali Linux for attack simulation. The setup includes real-time monitoring, alerting, and incident response workflows to replicate enterprise security operations."
+    },
+    "bruteforce": {
+      "description": "A Python script that brute-forces passwords from 1 to 7 characters using lowercase letters and numbers.",
+      "shortDescription": "Python script for brute-forcing 1–7 character passwords using lowercase letters and numbers.",
+      "development": "Developed using Python with itertools for efficient character combination generation. The script implements multithreading for performance optimization and includes progress tracking. Features customizable character sets and target password length ranges."
+    },
+    "writeups": {
+      "description": "Comprehensive guides and walkthroughs for various Capture The Flag competitions I've participated in.",
+      "shortDescription": "CTF guides and walkthroughs",
+      "development": "I document my approach to solving CTF challenges across multiple categories including web exploitation, cryptography, reverse engineering, and forensics. Each writeup includes methodology, tools used, and learning outcomes to help others understand the problem-solving process."
+    },
+    "pickup": {
+      "description": "A mobile application for computer loan services at Icesi University, built with Flutter for cross-platform compatibility.",
+      "shortDescription": "Computer loan service mobile app for Icesi University",
+      "development": "Developed using Flutter framework for iOS and Android compatibility. The app features user authentication, equipment booking system, QR code scanning for device identification, and real-time availability tracking. Implements clean architecture patterns and state management with Provider."
+    },
+    "contacts": {
+      "description": "A comprehensive contacts management application for university students, built with Java and implementing advanced data structures.",
+      "shortDescription": "Contacts book application for university students",
+      "development": "Built with Java using object-oriented programming principles and implementing various data structures like linked lists, hash tables, and binary trees for efficient contact storage and retrieval. Features include contact categorization, search functionality, and data persistence."
+    },
+    "digitalsignature": {
+      "description": "A Java Swing desktop application for digital file signing using RSA cryptography. Features key generation, file signing, and authenticity verification.",
+      "shortDescription": "Desktop tool for digital file signing with RSA cryptography",
+      "development": "Developed using Java Swing for the graphical interface and implementing RSA algorithms for asymmetric cryptography. The application enables generation of public/private key pairs, digital file signing, and signature authenticity verification. Includes secure file handling, integrity validation, and an intuitive interface for cryptographic operations."
+    },
+    "viewProject": "View project"
+  }

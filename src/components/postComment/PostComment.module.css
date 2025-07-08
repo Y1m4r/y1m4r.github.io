@@ -1,0 +1,90 @@
+.guestbook {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px 12px 5px;
+  border-radius: 10px;
+  background: transparent;
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.guestbook:hover {
+  background: var(--transparent-primary-light);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--hover-primary-light);
+  transition: var(--dynamic-fast-transition);
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.userName {
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid transparent;
+}
+
+.userName:hover {
+  border-bottom: 2px solid var(--text-primary);
+  transition: var(--dynamic-fast-transition);
+}
+
+.date {
+  font-size: 14px;
+}
+
+.comment {
+  margin-top: 2px;
+  line-height: normal;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.linkIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  color: var(--text-muted);
+  transition: var(--dynamic-fast-transition);
+  z-index: 10;
+}
+
+.linkIcon:hover {
+  color: var(--text-primary);
+  scale: 1.05;
+  transition: var(--dynamic-fast-transition);
+}

@@ -1,0 +1,102 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="url(#bgGradient)" rx="20"/>
+  
+  <!-- Patrón de código binario (fondo decorativo) -->
+  <g opacity="0.1">
+    <text x="20" y="40" font-family="monospace" font-size="12" fill="white">01001000 01100001 01110011 01101000</text>
+    <text x="20" y="60" font-family="monospace" font-size="12" fill="white">01010010 01010011 01000001 00100000</text>
+    <text x="20" y="80" font-family="monospace" font-size="12" fill="white">01000011 01110010 01111001 01110000</text>
+    <text x="20" y="260" font-family="monospace" font-size="12" fill="white">01010011 01101001 01100111 01101110</text>
+    <text x="20" y="280" font-family="monospace" font-size="12" fill="white">01010110 01100101 01110010 01101001</text>
+  </g>
+  
+  <!-- Escudo de seguridad central -->
+  <g transform="translate(200, 150)">
+    <!-- Escudo principal -->
+    <path d="M-40 -60 Q-40 -80 -20 -80 L20 -80 Q40 -80 40 -60 L40 -10 Q40 20 0 40 Q-40 20 -40 -10 Z" 
+          fill="url(#shieldGradient)" stroke="#047857" stroke-width="2"/>
+    
+    <!-- Cerradura dentro del escudo -->
+    <rect x="-15" y="-25" width="30" height="25" rx="3" fill="#064e3b" opacity="0.8"/>
+    <circle cx="0" cy="-35" r="10" fill="none" stroke="#064e3b" stroke-width="3"/>
+    <circle cx="0" cy="-12" r="3" fill="#10b981"/>
+    <rect x="-1" y="-9" width="2" height="8" fill="#10b981"/>
+  </g>
+  
+  <!-- Llave RSA izquierda -->
+  <g transform="translate(100, 130)">
+    <rect x="0" y="0" width="40" height="8" rx="4" fill="url(#keyGradient)"/>
+    <circle cx="8" cy="4" r="8" fill="url(#keyGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="8" cy="4" r="4" fill="none" stroke="#d97706" stroke-width="2"/>
+    
+    <!-- Dientes de la llave -->
+    <rect x="32" y="-3" width="3" height="6" fill="url(#keyGradient)"/>
+    <rect x="36" y="-5" width="3" height="8" fill="url(#keyGradient)"/>
+    <rect x="40" y="-2" width="3" height="5" fill="url(#keyGradient)"/>
+  </g>
+  
+  <!-- Llave RSA derecha -->
+  <g transform="translate(260, 170) scale(-1, 1)">
+    <rect x="0" y="0" width="40" height="8" rx="4" fill="url(#keyGradient)"/>
+    <circle cx="8" cy="4" r="8" fill="url(#keyGradient)" stroke="#d97706" stroke-width="2"/>
+    <circle cx="8" cy="4" r="4" fill="none" stroke="#d97706" stroke-width="2"/>
+    
+    <!-- Dientes de la llave -->
+    <rect x="32" y="-3" width="3" height="6" fill="url(#keyGradient)"/>
+    <rect x="36" y="-5" width="3" height="8" fill="url(#keyGradient)"/>
+    <rect x="40" y="-2" width="3" height="5" fill="url(#keyGradient)"/>
+  </g>
+  
+  <!-- Documento con firma digital -->
+  <g transform="translate(80, 200)">
+    <rect x="0" y="0" width="240" height="60" rx="8" fill="rgba(255,255,255,0.95)" stroke="#e5e7eb" stroke-width="2"/>
+    
+    <!-- Líneas del documento -->
+    <line x1="15" y1="15" x2="180" y2="15" stroke="#9ca3af" stroke-width="2"/>
+    <line x1="15" y1="25" x2="200" y2="25" stroke="#9ca3af" stroke-width="2"/>
+    <line x1="15" y1="35" x2="160" y2="35" stroke="#9ca3af" stroke-width="2"/>
+    
+    <!-- Sello de verificación -->
+    <circle cx="200" cy="30" r="20" fill="#10b981" opacity="0.2"/>
+    <circle cx="200" cy="30" r="15" fill="none" stroke="#10b981" stroke-width="3"/>
+    <path d="M192 30 L198 36 L208 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Texto "VERIFIED" -->
+    <text x="200" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#059669">VERIFIED</text>
+  </g>
+  
+  <!-- Título -->
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+    Digital Signature Tool
+  </text>
+  
+  <!-- Subtítulo -->
+  <text x="200" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cbd5e1">
+    RSA Cryptography &amp; File Verification
+  </text>
+  
+  <!-- Efecto de brillo -->
+  <circle cx="50" cy="50" r="3" fill="white" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="80" r="2" fill="white" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

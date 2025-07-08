@@ -1,0 +1,55 @@
+{
+    "head": {
+        "title": "Sobre mi"
+    },
+    "aboutMe": {
+        "description": "Soy Ingeniero de Software de la Universidad Icesi apasionado por la ciberseguridad, con enfoque en hacking ético y experiencia como AppSec Engineer y Analista de Seguridad, he abordado diversos desafíos desde identificar vulnerabilidades y realizar pruebas de penetración hasta realizar revisiones de código. Tengo experiencia con Metasploit, Burp Suite y Caido. Actualmente preparandome para las certificaciones OSCP y CBBH."
+    },
+    "categories": {
+        "skills": {
+            "subtitle": "Lenguajes de programación y herramientas con las que he trabajado"
+        },
+        "education": {
+            "subtitle": "Formación académica y crecimiento profesional.",
+            "li-1": "Ingenieria de Sistemas - Universidad Icesi",
+            "li-2": "Diplomado en Ethical Hacking (Red, Blue & Purple Team) - Universidad de Cataluña",
+            "li-3": "Hackers Academy - Hackmetrix"
+        },
+        "certifications": {
+            "subtitle": "Certificaciones profesionales en ciberseguridad y hacking ético"
+        },
+        "achievements": {
+            "subtitle": "Logros destacados y reconocimiento en ciberseguridad",
+            "li-1": "PortSwigger Academy",
+            "li-2": "Advent of Cyber 2024 - TryHackMe"
+        }
+    },
+    "toolsCaption": {
+        "kalilinux": "Distribución Linux para pentesting",
+        "parrotos": "Sistema operativo para seguridad",
+        "burpsuite": "Proxy de interceptación web",
+        "caido": "Proxy de interceptación web moderno",
+        "metasploit": "Framework de explotación",
+        "zapproxy": "Proxy de interceptación web",
+        "wireshark": "Analizador de protocolos de red",
+        "shodan": "Motor de búsqueda de dispositivos",
+        "hackthebox": "Plataforma de entrenamiento en ciberseguridad",
+        "python": "Lenguaje de programación versátil",
+        "bash": "Intérprete de comandos",
+        "java": "Lenguaje de programación robusto",
+        "go": "Lenguaje de programación compilado",
+        "js": "Desarrollo web interactivo",
+        "flutter": "Framework para aplicaciones multiplataforma",
+        "mysql": "Sistema de gestión de bases de datos",
+        "aws": "Servicios de computación en la nube",
+        "azure": "Plataforma de nube de Microsoft",
+        "digitalocean": "Proveedor de infraestructura en la nube",
+        "nessus": "Escáner de vulnerabilidades",
+        "wazuh": "Plataforma de seguridad y SIEM",
+        "vsCode": "Editor de código",
+        "cursor": "Editor de código asistido por IA",
+        "git": "Control de versiones",
+        "notion": "Gestión y documentación de proyectos",
+        "slack": "Plataforma de comunicación para equipos"
+    }
+}

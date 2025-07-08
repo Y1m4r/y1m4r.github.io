@@ -1,0 +1,46 @@
+.professionTitle {
+  /* Estilos que antes estaban en .header h2 en Header.module.css */
+  text-transform: uppercase;
+  font-size: clamp(45px, calc(1.5rem + 2vw), 52px);
+  font-weight: 400;
+  line-height: 110%;
+  background: linear-gradient(
+    to right,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 25%,
+    var(--color-primary-dark) 75%,
+    var(--color-primary) 100%
+  );
+  background-clip: text;
+  letter-spacing: -2px;
+  -webkit-text-fill-color: transparent;
+  
+  /* Mantener el alto para evitar saltos de layout cuando el texto cambia */
+  min-height: 58px; /* Ajusta este valor a la altura máxima de tus roles */
+  position: relative; /* Necesario para el posicionamiento absoluto del cursor */
+}
+
+/* Estilo para el cursor parpadeante */
+.cursor {
+  font-weight: bold;
+  color: var(--color-primary);
+  animation: blink 0.7s infinite;
+  position: absolute;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (width <= 768px) {
+  .professionTitle {
+    font-size: clamp(1rem, 8vw, 2.75rem);
+    min-height: 40px; /* Ajusta para móvil */
+  }
+}

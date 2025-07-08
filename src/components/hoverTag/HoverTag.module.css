@@ -1,0 +1,159 @@
+.tooltip {
+  position: absolute;
+  padding: 0 10px;
+  width: min-content;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: var(--text-primary);
+  color: var(--surface-primary);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: var(--inverse-weight);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  box-shadow: 0 1px 5px var(--color-neutral);
+}
+
+.tooltip svg {
+  position: absolute;
+  top: -7px;
+}
+.tooltip.bottom {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: auto;
+  top: calc(100% + 5px); /* Posiciona 5px debajo del elemento padre */
+}
+
+.tooltip.top {
+  left: 50%;
+  transform: translateX(-50%);
+  top: auto;
+  bottom: calc(100% + 5px); /* Posiciona 5px arriba del elemento padre */
+}
+
+.tooltip.mix {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: auto;
+  top: calc(100% + 5px); /* Por defecto se comporta como bottom */
+}
+
+/* .tooltip.show {
+  opacity: 1;
+  transition: opacity var(--dynamic-fast-transition);
+} */
+
+.tooltip.show {
+  opacity: 1;
+  transition: top var(--dynamic-fast-transition),
+    opacity var(--dynamic-fast-transition);
+}
+
+/* ANCHOR SIDE */
+.tooltip.left {
+  left: 0px;
+  transform: translateX(0%);
+}
+
+.tooltip.right {
+  right: 0;
+}
+
+.tooltip.left svg {
+  left: 20px;
+}
+
+.tooltip.right svg {
+  right: 20px;
+}
+
+.tooltip path {
+  fill: var(--text-primary);
+}
+
+/* MINIMAL */
+.tooltip.minimal {
+  height: 24px;
+  padding-inline: 12px;
+}
+
+.tooltip.minimal svg {
+  display: none;
+}
+
+.tooltip.show:not(.top).minimal {
+  top: calc(100% + 5px);
+}
+
+.tooltip.show.top.minimal {
+  bottom: calc(100% + 5px);
+  transition: bottom var(--dynamic-fast-transition),
+    opacity var(--dynamic-fast-transition);
+}
+
+/* DISABLED STATE */
+.tooltip.disabled {
+  display: none;
+}
+
+/* EXPANDED */
+.tooltip.expanded {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-items: center;
+  align-items: start;
+  border-radius: 0 15px 15px 15px;
+  gap: 3px;
+  height: 60px;
+  color: var(--text-primary);
+  background: var(--color-primary-light);
+  border: 2px solid var(--hover-primary-light);
+}
+
+.tooltip.expanded.show {
+  top: calc(100% + 10px);
+  left: 0;
+}
+
+.tooltip.expanded svg {
+  display: none;
+}
+
+.tooltip .label {
+  font-size: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: var(--title-weight);
+  width: 100%;
+  border-bottom: 2px solid var(--hover-primary-light);
+}
+
+.tooltip > .caption {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.tooltip.overflowRight {
+  left: auto;
+  right: 0;
+  border-radius: 0 15px 15px 15px;
+}
+
+@media (width <= 768px) {
+  .tooltip.left {
+    display: none;
+  }
+  .tooltip.mix {
+    top: auto;
+    bottom: calc(100% + 5px);
+  }
+}
