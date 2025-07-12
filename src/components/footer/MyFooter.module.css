@@ -68,15 +68,40 @@
 /* MEDIA QUERIES */
 @media (width <= 850px) {
   .footerLeft span {
-    max-width: 300px;
-    text-align: left;
+    text-align: center;
   }
 }
 
 @media (width <= 768px) {
   .footer {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .footerLeft {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footerTextContainer {
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footerLeft span {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .recaptchaText {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .footerLinks {
+    gap: 15px;
+    justify-content: center;
   }
 }

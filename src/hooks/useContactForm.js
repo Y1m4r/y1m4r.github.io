@@ -69,7 +69,7 @@ export const useContactForm = () => {
         email: formData.email.trim(),
         message: formData.message.trim(),
         time: formatDateToSubmit(),
-        recaptcha_token: recaptchaToken // Incluir token si existe
+        'g-recaptcha-response': recaptchaToken // Incluir token si existe
       };
       
       await sendContactEmail(emailData);

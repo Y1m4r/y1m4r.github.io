@@ -2,11 +2,7 @@
     "main": {
         "title": "Hey Mate! I'm",
         "state": "¡Looking for new challenges!",
-        "description": "Welcome to my space!\nHere, I share my journey in cybersecurity: projects, certifications, and CTFs. Always learning and growing. Curiosity drives me.",
-        "text-1": "I'm passionate about turning ",
-        "strong-1": "creative ideas into immersive digital experiences, ",
-        "text-2": "focusing on enhancing usability and accessibility while designing impactful interfaces. I'm ",
-        "strong-2": "looking to advance my professional career, ",
-        "text-3": "contributing to innovative teams while continuing to learn and adapt to new technologies. "
+        "description": "Welcome to my space!\nHere, I share my journey in cybersecurity: projects, certifications, and CTFs. Always learning and growing. Curiosity drives me."
+        
     }
 }

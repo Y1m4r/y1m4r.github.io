@@ -32,7 +32,7 @@ const ProjectCarousel = ({ projects }) => {
             slidesPerView: 2,
             spaceBetween: 20,
           },
-          1024: {
+          1200: {
             slidesPerView: 3,
             spaceBetween: 30,
           },

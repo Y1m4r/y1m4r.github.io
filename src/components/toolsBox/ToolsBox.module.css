@@ -40,7 +40,7 @@
 .box ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   align-items: center;
   justify-items: center;
   gap: 10px;
@@ -135,7 +135,7 @@
   }
 
   .box ul {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 8px;
     justify-items: center;
   }
@@ -237,7 +237,7 @@
   }
 
   .box ul {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
     gap: 8px;
     justify-items: center;
   }

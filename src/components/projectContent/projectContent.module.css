@@ -212,16 +212,18 @@
   }
 
   .titleContainer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .hero h1 {
-    font-size: clamp(2rem, calc(2rem + 2vw), 65px);
-    line-height: 80%;
+    font-size: clamp(1.5rem, calc(1.5rem + 2vw), 2.5rem);
+    line-height: 1.2;
     margin: 0;
-    width: 100%;
+    flex: 1;
   }
 
   .tools {
@@ -230,54 +232,52 @@
 
   .cta,
   .cta.fixed {
-    position: fixed;
+    position: relative;
     top: auto;
     right: auto;
-    bottom: 2vh;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: auto;
+    left: auto;
+    transform: none;
     animation: none;
-    z-index: 80;
+    z-index: auto;
     margin: 0;
-    height: 50px;
+    height: 40px;
+    gap: 8px;
   }
 
   .cta::before {
-    content: "";
-    top: calc(100% + 50px);
-    left: 50%;
-    transform: translateX(-50%) scale(2);
-    position: absolute;
-    z-index: -1;
-    width: 120vw;
-    height: 200px;
-    background: var(--surface-primary);
-    filter: blur(10px);
+    display: none;
   }
 
   .codeButton,
   .demoButton {
-    height: 50px;
+    height: 40px;
     font-size: 12px;
-    padding: 0 15px;
+    padding: 0 12px;
+    gap: 5px;
   }
 
   .codeButton span,
   .demoButton span {
-    display: none;
+    display: inline;
+    font-size: 12px;
   }
 }
 
 @media (width <= 500px) {
   .titleContainer {
-    gap: 10px;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.2rem, calc(1.2rem + 2vw), 2rem);
   }
 
   .codeButton,
   .demoButton {
-    width: 45px;
-    padding: 0;
-    justify-content: center;
+    padding: 0 10px;
+    font-size: 11px;
   }
 
   .codeButton span,

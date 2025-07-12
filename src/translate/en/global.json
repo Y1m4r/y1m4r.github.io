@@ -2,9 +2,9 @@
     "navbar": {
         "main": "Home",
         "projects": "Projects",
-        "about": "About",
+        "about": "About me",
         "education": "Education",
-        "contact": "Contact",
+        "contact": "Contact me",
         "label-language": "Spanish",
         "label-light": "Light",
         "label-dark": "Dark",
@@ -21,12 +21,6 @@
         "conclusion": "Conclusion",
         "option-seeweb": "Visit website",
         "option-viewRepo": "View repository"
-    },
-    "github": {
-        "repositories": "Public Repositories",
-        "stars": "Stars Received",
-        "followers": "Followers",
-        "commits": "Total Commits"
     },
     "recaptcha": {
         "info": "This site is protected by reCAPTCHA and the Google <1>Privacy Policy</1> and <3>Terms of Service</3> apply."

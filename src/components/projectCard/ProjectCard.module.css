@@ -53,7 +53,7 @@ a:hover * {
   top: 0;
   left: 0;
   opacity: 0;
-  filter: blur(60px);
+  filter: blur(30px);
   transition: 0.3s ease;
   z-index: -1;
 }
@@ -66,11 +66,11 @@ a:hover * {
 
   20% {
     opacity: 0.5;
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 
   100% {
-    opacity: 0.4;
+    opacity: 0.5;
     transform: scale(1);
   }
 }
@@ -294,5 +294,26 @@ a:hover * {
 
   .cardFooter > span {
     gap: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardProject {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardProject {
+    min-width: 100%;
+    border-radius: 20px;
+  }
+
+  .content {
+    border-radius: 20px;
+  }
+
+  .cardFooter {
+    border-radius: 0 0 20px 20px;
   }
 }
