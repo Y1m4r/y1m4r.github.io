@@ -297,6 +297,12 @@ a:hover * {
   }
 }
 
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .cardProject {
+    min-width: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   .cardProject {
     min-width: 280px;

@@ -5,6 +5,85 @@
   box-sizing: border-box;
 }
 
+/* Nuevo contenedor wrapper para controlar el overflow */
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  /* Padding extra para permitir que el glow se extienda fuera del área visible */
+  padding: 20px;
+  margin: -20px;
+}
+
+/* Máscara gradual en el borde superior */
+.carouselWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(
+    to bottom,
+    var(--surface-primary) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Máscara gradual en el borde inferior */
+.carouselWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120%;
+  height: 30px;
+  background: linear-gradient(
+    to top,
+    var(--surface-primary) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Máscara gradual en el lado izquierdo para efecto simétrico */
+.carouselWrapper .leftMask {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--surface-primary) 0%,
+    var(--surface-primary) 20%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Máscara gradual en el lado derecho para ocultar la 4ta tarjeta */
+.carouselWrapper .rightMask {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    var(--surface-primary) 0%,
+    var(--surface-primary) 20%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
 .mySwiper {
   width: 100%;
   height: 100%;
@@ -75,6 +154,17 @@
     padding: 0 40px 30px 40px;
   }
 
+  .carouselWrapper {
+    padding: 30px;
+    margin: -30px;
+  }
+
+  /* Ocultar la máscara en tablets donde se muestran 2 tarjetas */
+  .carouselWrapper::after,
+  .carouselWrapper::before {
+    display: none;
+  }
+
   .mySwiper {
     margin: 0 -5px -15px -5px;
   }
@@ -96,6 +186,17 @@
     padding: 0 30px 20px 30px;
   }
 
+  .carouselWrapper {
+    padding: 20px;
+    margin: -20px;
+  }
+
+  /* Mantener oculta la máscara en móviles donde se muestra 1 tarjeta */
+  .carouselWrapper::after,
+  .carouselWrapper::before {
+    display: none;
+  }
+
   .mySwiper {
     margin: 0;
   }
@@ -109,5 +210,21 @@
   .swiperButtonPrev::after,
   .swiperButtonNext::after {
     font-size: 14px;
+  }
+}
+
+/* Media query específica para pantallas donde se muestran exactamente 3 tarjetas */
+@media (min-width: 1200px) {
+  .carouselWrapper::after,
+  .carouselWrapper::before {
+    display: block;
+  }
+}
+
+/* En pantallas donde se muestran 2 tarjetas, no necesitamos la máscara */
+@media (max-width: 1199px) and (min-width: 769px) {
+  .carouselWrapper::after,
+  .carouselWrapper::before {
+    display: none;
   }
 } 

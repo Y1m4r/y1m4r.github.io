@@ -22,9 +22,6 @@
         "option-seeweb": "Visit website",
         "option-viewRepo": "View repository"
     },
-    "recaptcha": {
-        "info": "This site is protected by reCAPTCHA and the Google <1>Privacy Policy</1> and <3>Terms of Service</3> apply."
-    },
     "footer": {
         "text-copyright": "Developed by ",
         "text-end": "All rights reserved. For permissions or inquiries, please contact us directly."

@@ -28,8 +28,8 @@ export default function Contact() {
 // Subcomponente para el formulario, usando el hook
 const ContactForm = () => {
     const { t } = useTranslation("contact");
-    const { formData, errors, status, handleChange, handleSubmit } = useContactForm();
-    const isDisabled = status === 'loading' || status === 'success';
+    const { formData, errors, status, handleChange, handleSubmit, isBlocked, remainingAttempts } = useContactForm();
+    const isDisabled = status === 'loading' || status === 'success' || isBlocked;
 
     return (
         <>
@@ -69,6 +69,18 @@ const ContactForm = () => {
                     errorMessage={t("contact.textarea-error")}
                 />
                 <div className={styles.btnContainer}>
+                    {/* Indicador de rate limiting */}
+                    {!isBlocked && remainingAttempts <= 10 && remainingAttempts > 0 && (
+                        <p className={styles.rateLimitInfo}>
+                            {t("contact.rate-limit-info", { remaining: remainingAttempts })}
+                        </p>
+                    )}
+                    {isBlocked && (
+                        <p className={styles.rateLimitBlocked}>
+                            {t("contact.rate-limit-blocked")}
+                        </p>
+                    )}
+                    
                     {status !== 'success' && (
                         <AnimatedBorderButton type="submit" disabled={isDisabled}>
                             {status === 'loading' ? <p>Enviando...</p> : t("contact.btn-send")}

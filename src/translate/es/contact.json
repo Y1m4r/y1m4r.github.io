@@ -16,7 +16,9 @@
         "email-error": "Dejame un email válido",
         "textarea-placeholder": "¿Cómo podemos colaborar?",
         "textarea-error": "Compartime tu propuesta antes de enviar",
-        "btn-send": "Enviar"
+        "btn-send": "Enviar",
+        "rate-limit-info": "Tienes {{remaining}} envíos restantes",
+        "rate-limit-blocked": "Límite de envíos alcanzado. Intenta más tarde."
     },
     "notifications": {
         "validation-error": "Por favor completa todos los campos correctamente.",
@@ -28,6 +30,8 @@
         "error-service": "Error de configuración del servicio.",
         "error-recaptcha": "Error de verificación de seguridad. Inténtalo nuevamente.",
         "error-data": "Error en los datos enviados. Verifica la configuración.",
-        "error-auth": "Error de autenticación."
+        "error-auth": "Error de autenticación.",
+        "rate-limit-exceeded": "Has alcanzado el límite de envíos. Podrás enviar nuevamente en {{time}}.",
+        "rate-limit-warning": "Quedan {{remaining}} envíos disponibles en esta sesión."
     }
 }

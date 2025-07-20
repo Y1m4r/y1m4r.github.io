@@ -13,38 +13,50 @@ const ProjectCarousel = ({ projects }) => {
 
   return (
     <div className={styles.carouselContainer}>
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={30}
-        slidesPerView={3}
-        navigation={{
-          nextEl: `.${styles.swiperButtonNext}`,
-          prevEl: `.${styles.swiperButtonPrev}`,
-        }}
-        grabCursor={true}
-        simulateTouch={true}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-        className={styles.mySwiper}
-      >
-        {projects.map((project) => (
-          <SwiperSlide key={project.id} className={styles.swiperSlide}>
-            <ProjectCard project={project} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className={styles.carouselWrapper}>
+        {/* Máscaras graduales */}
+        <div className={styles.topMask}></div>
+        <div className={styles.bottomMask}></div>
+        <div className={styles.leftMask}></div>
+        <div className={styles.rightMask}></div>
+
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={30}
+          slidesPerView={3}
+          navigation={{
+            nextEl: `.${styles.swiperButtonNext}`,
+            prevEl: `.${styles.swiperButtonPrev}`,
+          }}
+          grabCursor={true}
+          simulateTouch={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 25,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          }}
+          className={styles.mySwiper}
+        >
+          {projects.map((project) => (
+            <SwiperSlide key={project.id} className={styles.swiperSlide}>
+              <ProjectCard project={project} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <div className={`${styles.swiperButtonPrev} swiper-button-prev`}></div>
       <div className={`${styles.swiperButtonNext} swiper-button-next`}></div>
     </div>

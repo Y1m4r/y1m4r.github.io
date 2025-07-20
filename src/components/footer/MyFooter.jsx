@@ -1,9 +1,8 @@
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import styles from "./MyFooter.module.css";
 
 // Hooks y Datos
 import { profileData } from "../../data/profileData";
-import { useRecaptcha } from "../../hooks/useRecaptcha";
 
 // Componentes
 import SocialLink from "../../components/socialLink/SocialLink";
@@ -15,7 +14,6 @@ import SocialLink from "../../components/socialLink/SocialLink";
 export default function MyFooter() {
   const { t } = useTranslation("global");
   const { socials } = profileData;
-  const { isRecaptchaReady } = useRecaptcha();
 
   const displaySocials = socials.filter(s => s.name !== 'share');
 
@@ -33,18 +31,6 @@ export default function MyFooter() {
             <strong>Y1m4r. </strong>
             {t("footer.text-end")}
           </span>
-          {isRecaptchaReady() && (
-            <p className={styles.recaptchaText}>
-              <Trans
-                  i18nKey="recaptcha.info"
-                  t={t}
-                  components={{
-                      1: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className={styles.link} />,
-                      3: <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className={styles.link} />
-                  }}
-              />
-            </p>
-          )}
         </div>
       </div>
       <div className={styles.footerLinks}>

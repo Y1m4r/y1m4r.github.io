@@ -17,7 +17,9 @@
         "email-error": "Please provide a valid email",
         "textarea-placeholder": "How can we collaborate?",
         "textarea-error": "Please share your proposal before sending",
-        "btn-send": "Send"
+        "btn-send": "Send",
+        "rate-limit-info": "You have {{remaining}} sends remaining",
+        "rate-limit-blocked": "Sending limit reached. Please try again later."
     },
     "notifications": {
         "validation-error": "Please complete all fields correctly.",
@@ -29,6 +31,8 @@
         "error-service": "Service configuration error.",
         "error-recaptcha": "Security verification error. Please try again.",
         "error-data": "Error in sent data.",
-        "error-auth": "Authentication error."
+        "error-auth": "Authentication error.",
+        "rate-limit-exceeded": "You have reached the sending limit. You can send again in {{time}}.",
+        "rate-limit-warning": "{{remaining}} sends remaining in this session."
     }
 }

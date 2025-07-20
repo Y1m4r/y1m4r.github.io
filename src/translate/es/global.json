@@ -22,9 +22,6 @@
         "development": "Proceso de desarrollo",
         "conclusion": "Conclusión"
     },
-    "recaptcha": {
-        "info": "Este sitio está protegido por reCAPTCHA y se aplican la <1>Política de Privacidad</1> y los <3>Términos de Servicio</3> de Google."
-    },
     "footer": {
         "text-copyright": "Desarrollado por ",
         "text-end": "Todos los derechos reservados. Para permisos o consultas, por favor contáctenos directamente."

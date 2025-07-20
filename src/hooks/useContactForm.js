@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useNotification } from '../components/notificationProvider/notificationProvider';
 import { sendContactEmail } from '../services/emailService';
 import { formatDateToSubmit } from '../hooks/formatDate';
-import { useRecaptcha } from './useRecaptcha';
+import { useRateLimit } from './useRateLimit';
+// import { useRecaptcha } from './useRecaptcha'; // Comentado - mantener para uso futuro
 
 // Función de utilidad para validación
 const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email);
@@ -11,7 +12,8 @@ const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email);
 export const useContactForm = () => {
   const { t } = useTranslation("contact");
   const notify = useNotification();
-  const { executeRecaptchaAction, isRecaptchaReady } = useRecaptcha();
+  const { checkRateLimit, recordAttempt, getTimeInfo, isBlocked, remainingAttempts } = useRateLimit();
+  // const { executeRecaptchaAction, isRecaptchaReady } = useRecaptcha(); // Comentado - mantener para uso futuro
   const [formData, setFormData] = useState({ fullname: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // 'idle', 'loading', 'success', 'error'
@@ -45,9 +47,18 @@ export const useContactForm = () => {
       return;
     }
 
+    // Verificar rate limiting antes de proceder
+    const rateLimitCheck = checkRateLimit();
+    if (!rateLimitCheck.allowed) {
+      const { formattedTime } = getTimeInfo();
+      notify("Error", t("notifications.rate-limit-exceeded", { time: formattedTime, remaining: rateLimitCheck.remaining }));
+      return;
+    }
+
     setStatus('loading');
     
     try {
+      /* CÓDIGO RECAPTCHA COMENTADO - MANTENER PARA USO FUTURO
       // Ejecutar reCAPTCHA v3 si está disponible
       let recaptchaToken = null;
       if (isRecaptchaReady()) {
@@ -62,6 +73,7 @@ export const useContactForm = () => {
       } else {
         console.warn('reCAPTCHA no está disponible, enviando sin verificación');
       }
+      */
 
       const emailData = { 
         ...formData, 
@@ -69,14 +81,26 @@ export const useContactForm = () => {
         email: formData.email.trim(),
         message: formData.message.trim(),
         time: formatDateToSubmit(),
-        'g-recaptcha-response': recaptchaToken // Incluir token si existe
+        // 'g-recaptcha-response': recaptchaToken // Comentado - mantener para uso futuro
       };
       
       await sendContactEmail(emailData);
+      
+      // Registrar el intento exitoso en rate limiting
+      const attemptResult = recordAttempt();
+      console.log(`Email enviado exitosamente. Intentos restantes: ${attemptResult.remaining}`);
+      
       setStatus('success');
       notify("Success", t("notifications.success"));
       setFormData({ fullname: '', email: '', message: '' }); // Reset form
       setErrors({}); // Reset errors
+      
+      // Mostrar advertencia si quedan pocos intentos
+      if (attemptResult.remaining <= 5 && attemptResult.remaining > 0) {
+        setTimeout(() => {
+          notify("Warning", t("notifications.rate-limit-warning", { remaining: attemptResult.remaining }));
+        }, 2000);
+      }
       
       // Resetear status después de 5 segundos
       setTimeout(() => setStatus('idle'), 5000);
@@ -110,5 +134,5 @@ export const useContactForm = () => {
     }
   };
 
-  return { formData, errors, status, handleChange, handleSubmit };
+  return { formData, errors, status, handleChange, handleSubmit, isBlocked, remainingAttempts };
 };
