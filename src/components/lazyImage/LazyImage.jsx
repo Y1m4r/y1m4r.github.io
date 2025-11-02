@@ -37,17 +37,19 @@ export default function LazyImage({ src, alt, radius = 0, ...props }) {
       <div
         className={`${styles.skeleton} ${isLoaded ? styles.hide : null}`}
       ></div>
-      <img
-        ref={imgRef}
-        src={isVisible ? src : "img/placeholder.png"}
-        alt={alt}
-        {...props}
-        className={styles.image}
-        onLoad={handleLoad}
-        style={{
-          opacity: isLoaded ? 1 : 0,
-        }}
-      />
+      {isVisible && (
+        <img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          {...props}
+          className={styles.image}
+          onLoad={handleLoad}
+          style={{
+            opacity: isLoaded ? 1 : 0,
+          }}
+        />
+      )}
     </div>
   );
 }

@@ -21,8 +21,8 @@ export default function MyFooter() {
     <footer className={styles.footer}>
       <div className={styles.footerLeft}>
         <SocialLink
-          iconName="share"
-          type="secondary"
+          name="share"
+          variant="secondary"
           position="top"
         />
         <div className={styles.footerTextContainer}>
@@ -37,8 +37,8 @@ export default function MyFooter() {
         {displaySocials.map((social) => (
           <SocialLink
             key={social.name}
-            iconName={social.name}
-            type="secondary"
+            name={social.name}
+            variant="secondary"
             position="top"
           />
         ))}

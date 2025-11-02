@@ -46,8 +46,8 @@ export const menuAboutme = {
   1: {
     title: "Skills",
     svg: (
-      <svg fill="currentColor" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 392.598 392.598" xml:space="preserve">
+      <svg fill="currentColor" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 392.598 392.598" xmlSpace="preserve">
 <g>
 	<g>
 		<path d="M216.756,0c-87.467,0-160,70.659-162.651,157.737L13.766,266.02c-2.133,4.655,0.388,14.739,10.214,14.739h29.996v33.81
@@ -98,8 +98,8 @@ export const menuAboutme = {
   2: {
     title: "Education",
     svg: (
-      <svg fill="currentColor" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 496 496" xml:space="preserve">
+      <svg fill="currentColor" width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 496 496" xmlSpace="preserve">
 <g>
 	<g>
 		<path d="M472,129.125V83.741l9.92-2.208c8.288-1.848,14.08-9.056,14.08-17.544s-5.792-15.696-14.08-17.544L297.168,5.381
