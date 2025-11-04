@@ -10,6 +10,12 @@ import NetworkButton from "../networkButton/NetworkButton";
  * @param {'top' | 'bottom' | 'mix'} position - Posición del tooltip.
  */
 const SocialLink = ({ name, variant, position }) => {
+  // Validación temprana del nombre
+  if (!name || typeof name !== 'string') {
+    console.warn(`Social link recibió un nombre inválido:`, name);
+    return null;
+  }
+
   const social = socialLinksData[name];
   const { handleShare } = useShare(); // Hook para la lógica de compartir
 

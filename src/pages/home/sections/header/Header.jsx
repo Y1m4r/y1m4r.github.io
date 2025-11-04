@@ -23,7 +23,7 @@ const CallToAction = ({ socialLinks }) => {
       <div className={styles.social}>
         {socialLinks.map((social, index) => (
           // El separador se puede manejar con CSS :not(:last-child) o añadirlo aquí
-          <SocialLink key={index} name={social.name} variant={social.type} position="top" />
+          social?.name && <SocialLink key={social.name || index} name={social.name} variant={social.type} position="top" />
         ))}
       </div>
     </motion.div>
@@ -65,7 +65,12 @@ export default function Header() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
       >
-        <img src={profileImage} alt={`Foto de perfil de ${name}`} loading="eager" />
+        <img 
+          src={profileImage} 
+          alt={`Foto de perfil de ${name}`} 
+          loading="eager"
+          fetchpriority="high"
+        />
       </motion.div>
     </header>
   );
