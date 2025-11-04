@@ -15,11 +15,3 @@
 **JavaScript:** Añade interactividad dinámica a cada sección del portafolio.
 
 **CSS3 (Flexbox y Grid):** Para un diseño limpio, adaptable y profesional.
-
-**EmailJS:** Sistema de contacto integrado para comunicación directa.
-
-## 📧 Configuración de EmailJS
-
-Para configurar el formulario de contacto en producción, consulta:
-- **Solución rápida (5 min):** [QUICK_FIX.md](./QUICK_FIX.md)
-- **Documentación completa:** [SETUP_EMAILJS.md](./SETUP_EMAILJS.md)

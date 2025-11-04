@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNotification } from '../components/notificationProvider/notificationProvider';
 import { sendContactEmail } from '../services/emailService';
@@ -17,6 +17,17 @@ export const useContactForm = () => {
   const [formData, setFormData] = useState({ fullname: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // 'idle', 'loading', 'success', 'error'
+  
+  // Refs para almacenar los timeouts y poder limpiarlos
+  const timeoutRefs = useRef([]);
+
+  // Limpiar todos los timeouts cuando el componente se desmonte
+  useEffect(() => {
+    return () => {
+      timeoutRefs.current.forEach(timeoutId => clearTimeout(timeoutId));
+      timeoutRefs.current = [];
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -75,9 +86,9 @@ export const useContactForm = () => {
       }
       */
 
-      const emailData = { 
-        ...formData, 
-        name: formData.fullname.trim(), 
+      // Preparar datos limpios para envío (sin duplicados)
+      const emailData = {
+        name: formData.fullname.trim(),
         email: formData.email.trim(),
         message: formData.message.trim(),
         time: formatDateToSubmit(),
@@ -88,7 +99,11 @@ export const useContactForm = () => {
       
       // Registrar el intento exitoso en rate limiting
       const attemptResult = recordAttempt();
-      console.log(`Email enviado exitosamente. Intentos restantes: ${attemptResult.remaining}`);
+      
+      // Solo loggear en desarrollo
+      if (import.meta.env.DEV) {
+        console.log(`Email enviado exitosamente. Intentos restantes: ${attemptResult.remaining}`);
+      }
       
       setStatus('success');
       notify("Success", t("notifications.success"));
@@ -97,16 +112,22 @@ export const useContactForm = () => {
       
       // Mostrar advertencia si quedan pocos intentos
       if (attemptResult.remaining <= 5 && attemptResult.remaining > 0) {
-        setTimeout(() => {
+        const timeoutId = setTimeout(() => {
           notify("Warning", t("notifications.rate-limit-warning", { remaining: attemptResult.remaining }));
         }, 2000);
+        timeoutRefs.current.push(timeoutId);
       }
       
       // Resetear status después de 5 segundos
-      setTimeout(() => setStatus('idle'), 5000);
+      const resetTimeoutId = setTimeout(() => setStatus('idle'), 5000);
+      timeoutRefs.current.push(resetTimeoutId);
     } catch (error) {
       setStatus('error');
-      console.error("Error al enviar el correo: ", error);
+      
+      // Solo loggear en desarrollo
+      if (import.meta.env.DEV) {
+        console.error("Error al enviar el correo: ", error);
+      }
       
       let errorMessage = t("notifications.error-default");
       
@@ -120,6 +141,8 @@ export const useContactForm = () => {
           errorMessage = t("notifications.error-service");
         } else if (error.message.includes('reCAPTCHA')) {
           errorMessage = t("notifications.error-recaptcha");
+        } else if (error.message.includes('Datos del formulario incompletos')) {
+          errorMessage = t("notifications.validation-error");
         }
       } else if (error?.status === 400) {
         errorMessage = t("notifications.error-data");
@@ -130,7 +153,8 @@ export const useContactForm = () => {
       notify("Error", errorMessage);
       
       // Resetear status de error después de 3 segundos
-      setTimeout(() => setStatus('idle'), 3000);
+      const errorTimeoutId = setTimeout(() => setStatus('idle'), 3000);
+      timeoutRefs.current.push(errorTimeoutId);
     }
   };
 
