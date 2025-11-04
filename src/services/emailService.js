@@ -33,17 +33,9 @@ export const sendContactEmail = async (formData) => {
       formData
     );
     
-    // Solo loggear en desarrollo
-    if (import.meta.env.DEV) {
-      console.log('Email enviado exitosamente:', response);
-    }
-    
     return response;
   } catch (error) {
-    // Solo loggear en desarrollo
-    if (import.meta.env.DEV) {
-      console.error('Error detallado de EmailJS:', error);
-    }
+    console.error('Error detallado de EmailJS:', error);
     
     // Mejorar el mensaje de error basado en el tipo de error
     if (error.status === 400) {

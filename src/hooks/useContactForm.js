@@ -100,11 +100,6 @@ export const useContactForm = () => {
       // Registrar el intento exitoso en rate limiting
       const attemptResult = recordAttempt();
       
-      // Solo loggear en desarrollo
-      if (import.meta.env.DEV) {
-        console.log(`Email enviado exitosamente. Intentos restantes: ${attemptResult.remaining}`);
-      }
-      
       setStatus('success');
       notify("Success", t("notifications.success"));
       setFormData({ fullname: '', email: '', message: '' }); // Reset form
@@ -123,11 +118,7 @@ export const useContactForm = () => {
       timeoutRefs.current.push(resetTimeoutId);
     } catch (error) {
       setStatus('error');
-      
-      // Solo loggear en desarrollo
-      if (import.meta.env.DEV) {
-        console.error("Error al enviar el correo: ", error);
-      }
+      console.error("Error al enviar el correo: ", error);
       
       let errorMessage = t("notifications.error-default");
       
