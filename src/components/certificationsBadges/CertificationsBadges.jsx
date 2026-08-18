@@ -1,5 +1,5 @@
 import styles from "./CertificationsBadges.module.css";
-import { profileData } from "../../data/profileData";
+import { profileData } from "../../data/ProfileData";
 import LazyImage from "../lazyImage/LazyImage";
 import HoverTag from "../hoverTag/HoverTag";
 
@@ -14,7 +14,7 @@ const CertificationsBadges = () => {
         {duplicatedCerts.map((cert, index) => (
           <div className={styles.badgeCard} key={`${cert.id}-${index}`}>
             <HoverTag
-              label={`${cert.name} - ${cert.issuer} (${cert.year})`}
+              label={[cert.name, cert.issuer, cert.year].filter(Boolean).join(" - ")}
               position="top"
             >
               <div className={styles.badgeContainer}>
@@ -26,7 +26,7 @@ const CertificationsBadges = () => {
                 <div className={styles.badgeInfo}>
                   <h4 className={styles.badgeName}>{cert.name}</h4>
                  {/* <p className={styles.badgeIssuer}>{cert.issuer}</p> */}
-                  <span className={styles.badgeYear}>{cert.year}</span>
+                  {cert.year && <span className={styles.badgeYear}>{cert.year}</span>}
                 </div>
               </div>
             </HoverTag>

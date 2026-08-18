@@ -5,11 +5,16 @@
       "option-share": "Share",
       "option-goUp": "Go up",
       "text-1": "",
-      "strong-1": "Welcome to my project showcase. ",
-      "text-2": "Here I apply what I learn and experiment with new ideas. From security tools and automation to web development and educational games, each project reflects my passion for technology, creative thinking, and ongoing growth as a professional.",
+      "strong-1": "Selected security work. ",
+      "text-2": "This collection highlights practical security research, labs, automation, and technical writing. Each project documents a clear scope, methodology, and learning outcome rather than presenting lab work as client experience.",
       "strong-2": "",
       "text-3": "",
       "strong-3": ""
+    },
+    "mobsentinel": {
+      "description": "An Apache-2.0 licensed Python framework for authorized mobile security assessments. It organizes methodology, engagement isolation, and reproducible evidence around OWASP Mobile Top 10 and MASVS/MASTG guidance.",
+      "shortDescription": "Human-gated mobile pentest framework with reproducible methodology and evidence.",
+      "development": "MobSentinel structures Android-first assessments with iOS parity across reconnaissance, static analysis, dynamic testing, network review, and findings. It keeps methodology separate from engagement data, includes offline tests, and requires human review before a finding is reported."
     },
     "siem": {
       "description": "A simple, step-by-step guide to setting up a home SIEM lab using Elastic and Kali Linux. Perfect for practicing SOC analyst skills.",

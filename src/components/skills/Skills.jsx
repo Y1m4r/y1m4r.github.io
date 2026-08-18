@@ -1,7 +1,7 @@
 import styles from "./Skills.module.css";
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import { profileData } from "../../data/profileData";
+import { profileData } from "../../data/ProfileData";
 import { menuAboutme } from "../../data/FilterControlsData";
 import FilterCategory from "../filterCategory/FilterCategory";
 import HoverTag from "../hoverTag/HoverTag";
@@ -105,8 +105,8 @@ const MySkills = () => {
                         <motion.li
                           key={`${selectedCategory}-${index}`}
                           initial={{ opacity: 0, y: 20 }}
-                          animate={{ 
-                            opacity: 1, 
+                          animate={{
+                            opacity: 1,
                             y: 0,
                             transition: {
                               duration: 0.2,

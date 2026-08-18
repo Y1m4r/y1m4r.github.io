@@ -3,20 +3,20 @@
         "title": "Sobre mi"
     },
     "aboutMe": {
-        "description": "Soy Ingeniero de Software de la Universidad Icesi apasionado por la ciberseguridad, con enfoque en hacking ético y experiencia como AppSec Engineer y Analista de Seguridad, he abordado diversos desafíos desde identificar vulnerabilidades y realizar pruebas de penetración hasta realizar revisiones de código. Tengo experiencia con Metasploit, Burp Suite y Caido. Actualmente preparandome para las certificaciones OSCP y CBBH."
+        "description": "Me interesé por la seguridad porque me gusta entender por qué se rompen los sistemas y cómo un equipo puede realmente corregirlos. Trabajo entre seguridad de aplicaciones y pentesting, combinando automatización con validación práctica. Cuando no estoy en una evaluación, construyo laboratorios, documento lo que aprendo y profundizo en seguridad móvil y de IA."
     },
     "categories": {
         "skills": {
-            "subtitle": "Lenguajes de programación y herramientas con las que he trabajado"
+            "subtitle": "Herramientas que uso en evaluaciones y desarrollo"
         },
         "education": {
-            "subtitle": "Formación académica y crecimiento profesional.",
+            "subtitle": "Formación académica y aprendizaje continuo en seguridad",
             "li-1": "Ingenieria de Sistemas - Universidad Icesi",
             "li-2": "Diplomado en Ethical Hacking (Red, Blue & Purple Team) - Universidad de Cataluña",
             "li-3": "Bootcamp de Ciberseguridad - Talento Tech"
         },
         "certifications": {
-            "subtitle": "Certificaciones profesionales en ciberseguridad y hacking ético"
+            "subtitle": "Certificaciones y credenciales de seguridad vigentes"
         },
         "achievements": {
             "subtitle": "Logros destacados y reconocimiento en ciberseguridad",

@@ -166,17 +166,16 @@ a:hover * {
   flex-direction: column;
 }
 
-.cardFooter > span > span {
+.projectMeta {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
 }
 
 .cardFooter h3 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  line-height: 1.2;
 }
 
 .cardFooter p {
@@ -192,7 +191,17 @@ a:hover * {
 
 .cardFooter ul {
   display: flex;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cardFooter ul li {
+  height: 22px;
+  margin: 0;
+  padding: 0 10px;
+  border-width: 1px;
+  font-size: 10px;
+  letter-spacing: -0.2px;
 }
 
 .cardImage img {
@@ -203,9 +212,6 @@ a:hover * {
 /* MEDIA QUERIES */
 
 @media (width <=1274px) {
-  .cardFooter > span > span {
-    flex-wrap: wrap;
-  }
   .cardFooter {
     height: 160px;
   }
@@ -239,10 +245,8 @@ a:hover * {
     border-radius: 0 30px 30px 0px;
   }
 
-  .cardProject:not(.minimal) .cardFooter > span > span {
-    flex-direction: column;
-    align-items: start;
-    gap: 10px;
+  .cardProject:not(.minimal) .projectMeta {
+    gap: 6px;
   }
 
   .cardProject:not(.minimal) .cardFooter p {
@@ -257,8 +261,8 @@ a:hover * {
     height: 170px;
   }
 
-  .cardFooter > span > span {
-    padding-top: 0px;
+  .projectMeta {
+    padding-top: 0;
   }
   .cardFooter {
     height: 130px;

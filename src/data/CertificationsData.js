@@ -1,6 +1,8 @@
 // Importar badges de certificaciones
 import badgeEHCA from '../assets/images/badge-ehca.png';
 import badgeEJPT from '../assets/images/badge-ejpt.png';
+import badgeCWES from '../assets/images/badge-cwes.webp';
+import badgeCAPen from '../assets/images/badge-capen.webp';
 
 /**
  * Clase simplificada para manejar los datos de certificaciones.
@@ -29,7 +31,24 @@ export class CertificationsData {
         category: "penetration-testing",
         level: "entry"
       },
-     
+      {
+        id: 3,
+        name: "HTB Certified Web Exploitation Specialist (CWES)",
+        badge: badgeCWES,
+        issuer: "Hack The Box",
+        description: "Web application exploitation certification",
+        category: "web-application-security",
+        level: "professional"
+      },
+      {
+        id: 4,
+        name: "Certified AppSec Pentester (CAPen)",
+        badge: badgeCAPen,
+        issuer: "The SecOps Group",
+        description: "Application security penetration testing certification",
+        category: "application-security",
+        level: "professional"
+      },
     ];
   }
 

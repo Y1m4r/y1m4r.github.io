@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./MyFooter.module.css";
 
 // Hooks y Datos
-import { profileData } from "../../data/profileData";
+import { profileData } from "../../data/ProfileData";
 
 // Componentes
 import SocialLink from "../../components/socialLink/SocialLink";

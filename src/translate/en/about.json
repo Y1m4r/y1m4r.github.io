@@ -12,20 +12,20 @@
         "option-readMore": "Read more",
         "skills": "Skills",
         "learning": "In Learning",
-        "description": "I'm a SWE from Icesi University with a strong passion for cybersecurity and a particular focus on ethical hacking. With experience as an AppSec Engineer and Security Analyst, I've tackled diverse challenges from identifying vulnerabilities and conducting penetration tests to performing secure code reviews. I'm proficient with tools like Metasploit, Burp Suite, and Caido. Currently preparing for the OSCP and CBBH certifications."
+        "description": "I got into security because I like figuring out why systems break and how a team can actually fix them. I work across application security and penetration testing, pairing automation with hands-on validation. When I'm not on an assessment, I'm building labs, writing up what I learn, and digging into mobile and AI security."
     },
     "categories": {
         "skills": {
-            "subtitle": "Languages & Tools I've Worked With"
+            "subtitle": "Tools I use in assessments and development"
         },
         "education": {
-            "subtitle": "Academic background and professional growth.",
+            "subtitle": "Formal education and continued security training",
             "li-1": "B.Sc. in Software Engineering from Icesi University",
             "li-2": "Professional Certificate in Ethical Hacking (Red, Blue & Purple Team) - UdeCatalunya",
             "li-3": "Cybersecurity Bootcamp by Talento Tech."
         },
         "certifications": {
-            "subtitle": "Professional certifications in cybersecurity and ethical hacking"
+            "subtitle": "Security certifications and current credentials"
         },
         "achievements": {
             "subtitle": "Notable accomplishments and recognition in cybersecurity",

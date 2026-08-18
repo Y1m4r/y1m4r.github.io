@@ -5,13 +5,12 @@ import { certificationsData } from './CertificationsData';
 export const profileData = {
   name: "Y1m4r,",
   // Array de roles para la animación de máquina de escribir
-  roles: ["Ethical Hacker"],
+  roles: ["AppSec Engineer", "Penetration Tester"],
   profileImage: profileImage,
   //status: "¡Buscando nuevos desafíos!", // Este dato también estaba en Header.jsx
   description: "",
   socials: [
     { name: "email", type: "primary" },
-    { name: "linkedin", type: "primary" },
     { name: "github", type: "primary" },
   ],
   aboutMe: {

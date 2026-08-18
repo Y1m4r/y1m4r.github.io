@@ -5,52 +5,36 @@ import writeupsImage from "../assets/images/writeupss.jpg";
 import pickupImage from "../assets/images/pickup1.webp";
 import agendaImage from "../assets/images/agenda1.webp";
 import rsaProjectImage from "../assets/images/rsa-project.svg";
+import mobSentinelImage from "../assets/images/sentinel.jpg";
 
 export const dataProjects = [
   // --- PROYECTOS DE SEGURIDAD (categoryId: 1) ---
   {
-    id: 1,
-    title: "SIEM HomeLab",
-    url: "siem-lab", // URL amigable para el routing
-    categoryId: 1, // <--- CATEGORÍA SECURITY
+    id: 7,
+    title: "MobSentinel",
+    url: "mobsentinel",
+    categoryId: 1,
     images: [
-      { src: siemImage, alt: "Diagrama del laboratorio SIEM" },
-      { src: siemProjectImage, alt: "Dashboard del SIEM" },
+      {
+        src: mobSentinelImage,
+        alt: "Abstract mobile security assessment workflow for MobSentinel",
+      },
     ],
-    tags: ["SOC", "Elastic"],
-    shortDescription: "siem.shortDescription",
-    description: "siem.description",
+    tags: ["Python", "Mobile Security", "OWASP MASVS"],
+    shortDescription: "mobsentinel.shortDescription",
+    description: "mobsentinel.description",
     links: [
-      { type: "website", url: "https://y1m4r.github.io/blog/build-a-siem-in-a-homelab/" },
+      { type: "code", url: "https://github.com/Y1m4r/mobsentinel" },
     ],
     details: [
-        "siem.development",
-    ]
-  },
-  {
-    id: 2,
-    title: "BruteForce",
-    url: "brute-force-script",
-    categoryId: 1, 
-    images: [
-      { src: bruteForceImage, alt: "Script de fuerza bruta en acción" },
+      "mobsentinel.development",
     ],
-    tags: ["Python", "Scripting"],
-    shortDescription: "bruteforce.shortDescription",
-    description: "bruteforce.description",
-    links: [
-      //  { type: "code", url: "https://github.com/Y1m4r/brute-force-script" },
-        { type: "website", url: "https://y1m4r.github.io/blog/pwd-brute-forcer-python/" },
-    ],
-    details: [
-        "bruteforce.development",
-    ]
   },
   {
     id: 3,
     title: "Write-Ups CTFs",
     url: "writeups",
-    categoryId: 1, 
+    categoryId: 1,
     images: [
       { src: writeupsImage, alt: "Colección de Write-Ups de CTF" },
     ],
@@ -62,6 +46,43 @@ export const dataProjects = [
     ],
     details: [
         "writeups.development",
+    ]
+  },
+  {
+    id: 2,
+    title: "BruteForce",
+    url: "brute-force-script",
+    categoryId: 1,
+    images: [
+      { src: bruteForceImage, alt: "Script de fuerza bruta en acción" },
+    ],
+    tags: ["Python", "Scripting"],
+    shortDescription: "bruteforce.shortDescription",
+    description: "bruteforce.description",
+    links: [
+      { type: "website", url: "https://y1m4r.github.io/blog/pwd-brute-forcer-python/" },
+    ],
+    details: [
+      "bruteforce.development",
+    ]
+  },
+  {
+    id: 1,
+    title: "SIEM HomeLab",
+    url: "siem-lab",
+    categoryId: 1,
+    images: [
+      { src: siemImage, alt: "Diagrama del laboratorio SIEM" },
+      { src: siemProjectImage, alt: "Dashboard del SIEM" },
+    ],
+    tags: ["SOC", "Elastic"],
+    shortDescription: "siem.shortDescription",
+    description: "siem.description",
+    links: [
+      { type: "website", url: "https://y1m4r.github.io/blog/build-a-siem-in-a-homelab/" },
+    ],
+    details: [
+      "siem.development",
     ]
   },
   {

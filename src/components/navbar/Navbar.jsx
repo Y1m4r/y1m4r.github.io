@@ -7,7 +7,7 @@ import { useThemeStore } from "../../store/ThemeStore";
 import { useLanguageStore } from "../../store/languageStore";
 import { useScrollPosition } from "../../hooks/useScrollPosition"; // <-- Nuestro nuevo hook
 import { handleScroll } from "../../hooks/handleScroll"; // <-- Hook para scroll compensado
-import { navLinks } from "../../data/navigationData"; // <-- Nuestros datos centralizados
+import { navLinks } from "../../data/NavigationData"; // <-- Nuestros datos centralizados
 import { socialLinksData } from "../../data/socialLinksData";
 import HoverTag from "../hoverTag/HoverTag";
 import styles from "./Navbar.module.css";

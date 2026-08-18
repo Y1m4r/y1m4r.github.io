@@ -18,7 +18,7 @@ const CardFooter = ({ title, tags, descriptionKey }) => {
   return (
     <div className={styles.cardFooter}>
       <span>
-        <span>
+        <div className={styles.projectMeta}>
           <h3 className={styles.title}>{title}</h3>
           <ul>
             {/* La lógica de slice se mantiene aquí, es una decisión de UI */}
@@ -26,7 +26,7 @@ const CardFooter = ({ title, tags, descriptionKey }) => {
               <Tag tag={tag} key={index} />
             ))}
           </ul>
-        </span>
+        </div>
         <p>{t(descriptionKey)}</p>
       </span>
     </div>

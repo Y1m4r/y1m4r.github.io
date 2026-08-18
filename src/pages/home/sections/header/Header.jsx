@@ -4,12 +4,12 @@ import styles from "./Header.module.css";
 import React from "react";
 
 // Importando desde la fuente de verdad
-import { profileData } from "../../../../data/profileData";
+import { profileData } from "../../../../data/ProfileData";
 
 // Importando componentes de UI reutilizables
 import SocialLink from "../../../../components/socialLink/SocialLink";
 import HeaderBackgroundShape from "../../../../components/headerBackgroundShape/HeaderBackgroundShape";
-import AnimatedRoles from "../../../../components/animatedRoles/AnimatedRoles";
+import AnimatedRoles from "../../../../components/AnimatedRoles/AnimatedRoles";
 
 // Subcomponente para los botones de Call To Action
 const CallToAction = ({ socialLinks }) => {

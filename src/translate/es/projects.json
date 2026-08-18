@@ -3,11 +3,16 @@
       "title": "Proyectos",
 
       "text-1": "",
-      "strong-1": "Bienvenido a mi colección de proyectos. ",
-      "text-2": "Aquí muestro lo que aprendo y experimento con nuevas ideas. Desde seguridad y automatización hasta desarrollo web y juegos, cada proyecto refleja mi pasión, creatividad y evolución profesional.",
+      "strong-1": "Trabajo de seguridad seleccionado. ",
+      "text-2": "Esta colección destaca investigación práctica, laboratorios, automatización y documentación técnica. Cada proyecto comunica un alcance, una metodología y un resultado de aprendizaje claros, sin presentar trabajo de laboratorio como experiencia con clientes.",
       "strong-2": "",
       "text-3": "",
       "strong-3": ""
+    },
+    "mobsentinel": {
+      "description": "Framework en Python con licencia Apache-2.0 para evaluaciones autorizadas de seguridad móvil. Organiza metodología, aislamiento por engagement y evidencia reproducible con base en OWASP Mobile Top 10 y MASVS/MASTG.",
+      "shortDescription": "Framework de pentest móvil con revisión humana, metodología y evidencia reproducible.",
+      "development": "MobSentinel estructura evaluaciones Android-first con paridad para iOS: reconocimiento, análisis estático, pruebas dinámicas, revisión de red y findings. Separa la metodología de los datos del engagement, incluye pruebas offline y exige revisión humana antes de reportar un hallazgo."
     },
     "siem": {
       "description": "Una guía simple y paso a paso para configurar un laboratorio SIEM casero usando Elastic y Kali Linux. Perfecto para practicar habilidades de analista SOC.",
