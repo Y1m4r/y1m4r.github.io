@@ -4,32 +4,27 @@ import IconTool from "../iconTool/IconTool";
 import { useTranslation } from "react-i18next";
 
 const tools = [
-  "kalilinux",
   "parrotos",
   "burpsuite",
   "caido",
   "zapproxy",
-  "metasploit",
   "wireshark",
   "shodan",
-  "hackthebox",
   "python",
   "bash",
-  "java",
   "go",
   "js",
   "flutter",
+  "mobsf",
+  "frida",
+  "docker",
+  "githubActions",
+  "bloodhound",
   "aws",
   "azure",
-  "digitalocean",
-  "mysql",
   "wazuh",
   "nessus",
-  "cursor",
-  "vsCode",
   "git",
-  "notion",
-  "slack",
 ];
 
 const ToolsBox = () => {

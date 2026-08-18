@@ -36,6 +36,7 @@ export class CertificationsData {
         name: "HTB Certified Web Exploitation Specialist (CWES)",
         badge: badgeCWES,
         issuer: "Hack The Box",
+        year: "2025",
         description: "Web application exploitation certification",
         category: "web-application-security",
         level: "professional"
@@ -45,6 +46,7 @@ export class CertificationsData {
         name: "Certified AppSec Pentester (CAPen)",
         badge: badgeCAPen,
         issuer: "The SecOps Group",
+        year: "2026",
         description: "Application security penetration testing certification",
         category: "application-security",
         level: "professional"

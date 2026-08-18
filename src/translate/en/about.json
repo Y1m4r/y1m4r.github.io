@@ -59,6 +59,11 @@
         "cursor": "AI-powered code editor",
         "git": "Version control",
         "notion": "Project management and documentation",
-        "slack": "Team communication platform"
+        "slack": "Team communication platform",
+        "mobsf": "Mobile application security analysis framework",
+        "frida": "Dynamic instrumentation toolkit",
+        "docker": "Container platform for reproducible labs and tooling",
+        "githubActions": "CI/CD workflow automation",
+        "bloodhound": "Attack-path analysis for Active Directory environments"
     }
 }
